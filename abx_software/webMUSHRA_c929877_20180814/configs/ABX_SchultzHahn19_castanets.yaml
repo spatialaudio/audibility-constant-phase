@@ -1,0 +1,501 @@
+testname: ABX-Test castanets
+testId: abx_castanets
+bufferSize: 4096
+stopOnErrors: true
+showButtonPreviousPage: false
+remoteService: service/write.php
+pages:
+  - type: generic
+    id: first_page
+    name: Herzlich Willkommen zu einem spannenden, aber auch sehr anstrengendem ABX-Hörtest.
+    content: Wenn bereit, bitte auf ''Nächste Seite'' klicken.
+  -
+    - random
+    -
+      - type: paired_comparison
+        id: castanets_0_00
+        name: castanets
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/castanets_phi000.wav
+        stimuli:
+          C1: configs/resources/stimuli/castanets_phi270.wav
+    -
+      - type: paired_comparison
+        id: castanets_0_01
+        name: castanets
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/castanets_phi000.wav
+        stimuli:
+          C1: configs/resources/stimuli/castanets_phi270.wav
+    -
+      - type: paired_comparison
+        id: castanets_0_02
+        name: castanets
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/castanets_phi270.wav
+        stimuli:
+          C1: configs/resources/stimuli/castanets_phi000.wav
+    -
+      - type: paired_comparison
+        id: castanets_0_03
+        name: castanets
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/castanets_phi270.wav
+        stimuli:
+          C1: configs/resources/stimuli/castanets_phi000.wav
+    -
+      - type: paired_comparison
+        id: castanets_0_04
+        name: castanets
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/castanets_phi270.wav
+        stimuli:
+          C1: configs/resources/stimuli/castanets_phi000.wav
+    -
+      - type: paired_comparison
+        id: castanets_0_05
+        name: castanets
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/castanets_phi000.wav
+        stimuli:
+          C1: configs/resources/stimuli/castanets_phi270.wav
+    -
+      - type: paired_comparison
+        id: castanets_0_06
+        name: castanets
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/castanets_phi000.wav
+        stimuli:
+          C1: configs/resources/stimuli/castanets_phi270.wav
+    -
+      - type: paired_comparison
+        id: castanets_0_07
+        name: castanets
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/castanets_phi000.wav
+        stimuli:
+          C1: configs/resources/stimuli/castanets_phi270.wav
+    -
+      - type: paired_comparison
+        id: castanets_0_08
+        name: castanets
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/castanets_phi000.wav
+        stimuli:
+          C1: configs/resources/stimuli/castanets_phi270.wav
+    -
+      - type: paired_comparison
+        id: castanets_0_09
+        name: castanets
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/castanets_phi000.wav
+        stimuli:
+          C1: configs/resources/stimuli/castanets_phi270.wav
+    -
+      - type: paired_comparison
+        id: castanets_0_10
+        name: castanets
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/castanets_phi270.wav
+        stimuli:
+          C1: configs/resources/stimuli/castanets_phi000.wav
+    -
+      - type: paired_comparison
+        id: castanets_0_11
+        name: castanets
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/castanets_phi000.wav
+        stimuli:
+          C1: configs/resources/stimuli/castanets_phi270.wav
+    -
+      - type: paired_comparison
+        id: castanets_0_12
+        name: castanets
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/castanets_phi000.wav
+        stimuli:
+          C1: configs/resources/stimuli/castanets_phi270.wav
+    -
+      - type: paired_comparison
+        id: castanets_0_13
+        name: castanets
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/castanets_phi000.wav
+        stimuli:
+          C1: configs/resources/stimuli/castanets_phi270.wav
+    -
+      - type: paired_comparison
+        id: castanets_0_14
+        name: castanets
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/castanets_phi270.wav
+        stimuli:
+          C1: configs/resources/stimuli/castanets_phi000.wav
+    -
+      - type: paired_comparison
+        id: castanets_0_15
+        name: castanets
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/castanets_phi000.wav
+        stimuli:
+          C1: configs/resources/stimuli/castanets_phi270.wav
+    -
+      - type: paired_comparison
+        id: castanets_0_16
+        name: castanets
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/castanets_phi000.wav
+        stimuli:
+          C1: configs/resources/stimuli/castanets_phi270.wav
+    -
+      - type: paired_comparison
+        id: castanets_0_17
+        name: castanets
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/castanets_phi270.wav
+        stimuli:
+          C1: configs/resources/stimuli/castanets_phi000.wav
+    -
+      - type: paired_comparison
+        id: castanets_0_18
+        name: castanets
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/castanets_phi000.wav
+        stimuli:
+          C1: configs/resources/stimuli/castanets_phi270.wav
+    -
+      - type: paired_comparison
+        id: castanets_0_19
+        name: castanets
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/castanets_phi270.wav
+        stimuli:
+          C1: configs/resources/stimuli/castanets_phi000.wav
+    -
+      - type: paired_comparison
+        id: castanets_0_20
+        name: castanets
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/castanets_phi000.wav
+        stimuli:
+          C1: configs/resources/stimuli/castanets_phi270.wav
+    -
+      - type: paired_comparison
+        id: castanets_0_21
+        name: castanets
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/castanets_phi270.wav
+        stimuli:
+          C1: configs/resources/stimuli/castanets_phi000.wav
+    -
+      - type: paired_comparison
+        id: castanets_0_22
+        name: castanets
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/castanets_phi270.wav
+        stimuli:
+          C1: configs/resources/stimuli/castanets_phi000.wav
+    -
+      - type: paired_comparison
+        id: castanets_0_23
+        name: castanets
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/castanets_phi270.wav
+        stimuli:
+          C1: configs/resources/stimuli/castanets_phi000.wav
+    -
+      - type: paired_comparison
+        id: castanets_0_24
+        name: castanets
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/castanets_phi000.wav
+        stimuli:
+          C1: configs/resources/stimuli/castanets_phi270.wav
+    -
+      - type: paired_comparison
+        id: castanets_0_25
+        name: castanets
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/castanets_phi000.wav
+        stimuli:
+          C1: configs/resources/stimuli/castanets_phi270.wav
+    -
+      - type: paired_comparison
+        id: castanets_0_26
+        name: castanets
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/castanets_phi000.wav
+        stimuli:
+          C1: configs/resources/stimuli/castanets_phi270.wav
+    -
+      - type: paired_comparison
+        id: castanets_0_27
+        name: castanets
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/castanets_phi270.wav
+        stimuli:
+          C1: configs/resources/stimuli/castanets_phi000.wav
+    -
+      - type: paired_comparison
+        id: castanets_0_28
+        name: castanets
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/castanets_phi000.wav
+        stimuli:
+          C1: configs/resources/stimuli/castanets_phi270.wav
+    -
+      - type: paired_comparison
+        id: castanets_0_29
+        name: castanets
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/castanets_phi270.wav
+        stimuli:
+          C1: configs/resources/stimuli/castanets_phi000.wav
+    -
+      - type: paired_comparison
+        id: castanets_0_30
+        name: castanets
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/castanets_phi270.wav
+        stimuli:
+          C1: configs/resources/stimuli/castanets_phi000.wav
+    -
+      - type: paired_comparison
+        id: castanets_0_31
+        name: castanets
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/castanets_phi270.wav
+        stimuli:
+          C1: configs/resources/stimuli/castanets_phi000.wav
+    -
+      - type: paired_comparison
+        id: castanets_0_32
+        name: castanets
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/castanets_phi270.wav
+        stimuli:
+          C1: configs/resources/stimuli/castanets_phi000.wav
+    -
+      - type: paired_comparison
+        id: castanets_0_33
+        name: castanets
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/castanets_phi270.wav
+        stimuli:
+          C1: configs/resources/stimuli/castanets_phi000.wav
+    -
+      - type: paired_comparison
+        id: castanets_0_34
+        name: castanets
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/castanets_phi270.wav
+        stimuli:
+          C1: configs/resources/stimuli/castanets_phi000.wav
+    -
+      - type: paired_comparison
+        id: castanets_0_35
+        name: castanets
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/castanets_phi270.wav
+        stimuli:
+          C1: configs/resources/stimuli/castanets_phi000.wav
+    -
+      - type: paired_comparison
+        id: castanets_0_36
+        name: castanets
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/castanets_phi000.wav
+        stimuli:
+          C1: configs/resources/stimuli/castanets_phi270.wav
+    -
+      - type: paired_comparison
+        id: castanets_0_37
+        name: castanets
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/castanets_phi000.wav
+        stimuli:
+          C1: configs/resources/stimuli/castanets_phi270.wav
+    -
+      - type: paired_comparison
+        id: castanets_0_38
+        name: castanets
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/castanets_phi270.wav
+        stimuli:
+          C1: configs/resources/stimuli/castanets_phi000.wav
+    -
+      - type: paired_comparison
+        id: castanets_0_39
+        name: castanets
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/castanets_phi270.wav
+        stimuli:
+          C1: configs/resources/stimuli/castanets_phi000.wav
+    -
+      - type: paired_comparison
+        id: castanets_0_40
+        name: castanets
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/castanets_phi000.wav
+        stimuli:
+          C1: configs/resources/stimuli/castanets_phi270.wav
+    -
+      - type: paired_comparison
+        id: castanets_0_41
+        name: castanets
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/castanets_phi270.wav
+        stimuli:
+          C1: configs/resources/stimuli/castanets_phi000.wav
+  - type: finish
+    name: Fertig :-)
+    content: Herzlichen Dank!
+    showResults: false
+    writeResults: true
+    questionnaire:
+        - type: number
+          label: VP-Nummer
+          name: vp_id
+          default: 0
+        - type: number
+          label: Alter
+          name: age
+          min: 20
+          max: 60
+          default: 17
+        - type: likert
+          label: Geschlecht
+          name: gender
+          response:
+            - value: other
+              label: divers
+            - value: female
+              label: weiblich
+            - value: male
+              label: männlich

@@ -1,0 +1,369 @@
+testname: ABX-Test Teil 2
+testId: abx_constant_phase_shift
+bufferSize: 4096
+stopOnErrors: true
+showButtonPreviousPage: false
+remoteService: service/write.php
+pages:
+  - type: generic
+    id: first_page
+    name: Herzlich Willkommen zu einem spannenden, aber auch sehr anstrengendem ABX-Hörtest.
+    content: Wenn bereit, bitte auf ''Nächste Seite'' klicken.
+  -
+    - random
+    -
+      - type: paired_comparison
+        id: castanets_2_00
+        name: castanets
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/castanets_phi000.wav
+        stimuli:
+          C1: configs/resources/stimuli/castanets_phi270.wav
+    -
+      - type: paired_comparison
+        id: castanets_2_01
+        name: castanets
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/castanets_phi270.wav
+        stimuli:
+          C1: configs/resources/stimuli/castanets_phi000.wav
+    -
+      - type: paired_comparison
+        id: castanets_2_02
+        name: castanets
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/castanets_phi270.wav
+        stimuli:
+          C1: configs/resources/stimuli/castanets_phi000.wav
+    -
+      - type: paired_comparison
+        id: castanets_2_03
+        name: castanets
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/castanets_phi000.wav
+        stimuli:
+          C1: configs/resources/stimuli/castanets_phi270.wav
+    -
+      - type: paired_comparison
+        id: castanets_2_04
+        name: castanets
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/castanets_phi270.wav
+        stimuli:
+          C1: configs/resources/stimuli/castanets_phi000.wav
+    -
+      - type: paired_comparison
+        id: castanets_2_05
+        name: castanets
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/castanets_phi000.wav
+        stimuli:
+          C1: configs/resources/stimuli/castanets_phi270.wav
+    -
+      - type: paired_comparison
+        id: square_a_2_00
+        name: square_a
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/square_a_phi270.wav
+        stimuli:
+          C1: configs/resources/stimuli/square_a_phi000.wav
+    -
+      - type: paired_comparison
+        id: square_a_2_01
+        name: square_a
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/square_a_phi000.wav
+        stimuli:
+          C1: configs/resources/stimuli/square_a_phi270.wav
+    -
+      - type: paired_comparison
+        id: square_a_2_02
+        name: square_a
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/square_a_phi270.wav
+        stimuli:
+          C1: configs/resources/stimuli/square_a_phi000.wav
+    -
+      - type: paired_comparison
+        id: square_a_2_03
+        name: square_a
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/square_a_phi000.wav
+        stimuli:
+          C1: configs/resources/stimuli/square_a_phi270.wav
+    -
+      - type: paired_comparison
+        id: square_a_2_04
+        name: square_a
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/square_a_phi270.wav
+        stimuli:
+          C1: configs/resources/stimuli/square_a_phi000.wav
+    -
+      - type: paired_comparison
+        id: square_a_2_05
+        name: square_a
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/square_a_phi000.wav
+        stimuli:
+          C1: configs/resources/stimuli/square_a_phi270.wav
+    -
+      - type: paired_comparison
+        id: square_b_2_00
+        name: square_b
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/square_b_phi315.wav
+        stimuli:
+          C1: configs/resources/stimuli/square_b_phi000.wav
+    -
+      - type: paired_comparison
+        id: square_b_2_01
+        name: square_b
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/square_b_phi000.wav
+        stimuli:
+          C1: configs/resources/stimuli/square_b_phi315.wav
+    -
+      - type: paired_comparison
+        id: square_b_2_02
+        name: square_b
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/square_b_phi315.wav
+        stimuli:
+          C1: configs/resources/stimuli/square_b_phi000.wav
+    -
+      - type: paired_comparison
+        id: square_b_2_03
+        name: square_b
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/square_b_phi000.wav
+        stimuli:
+          C1: configs/resources/stimuli/square_b_phi315.wav
+    -
+      - type: paired_comparison
+        id: square_b_2_04
+        name: square_b
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/square_b_phi000.wav
+        stimuli:
+          C1: configs/resources/stimuli/square_b_phi315.wav
+    -
+      - type: paired_comparison
+        id: square_b_2_05
+        name: square_b
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/square_b_phi315.wav
+        stimuli:
+          C1: configs/resources/stimuli/square_b_phi000.wav
+    -
+      - type: paired_comparison
+        id: pnoise_2_00
+        name: pnoise
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/pnoise_phi000.wav
+        stimuli:
+          C1: configs/resources/stimuli/pnoise_phi270.wav
+    -
+      - type: paired_comparison
+        id: pnoise_2_01
+        name: pnoise
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/pnoise_phi000.wav
+        stimuli:
+          C1: configs/resources/stimuli/pnoise_phi270.wav
+    -
+      - type: paired_comparison
+        id: pnoise_2_02
+        name: pnoise
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/pnoise_phi000.wav
+        stimuli:
+          C1: configs/resources/stimuli/pnoise_phi270.wav
+    -
+      - type: paired_comparison
+        id: pnoise_2_03
+        name: pnoise
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/pnoise_phi270.wav
+        stimuli:
+          C1: configs/resources/stimuli/pnoise_phi000.wav
+    -
+      - type: paired_comparison
+        id: pnoise_2_04
+        name: pnoise
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/pnoise_phi270.wav
+        stimuli:
+          C1: configs/resources/stimuli/pnoise_phi000.wav
+    -
+      - type: paired_comparison
+        id: pnoise_2_05
+        name: pnoise
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/pnoise_phi270.wav
+        stimuli:
+          C1: configs/resources/stimuli/pnoise_phi000.wav
+    -
+      - type: paired_comparison
+        id: hotelcalifornia_2_00
+        name: hotelcalifornia
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/hotelcalifornia_phi270.wav
+        stimuli:
+          C1: configs/resources/stimuli/hotelcalifornia_phi000.wav
+    -
+      - type: paired_comparison
+        id: hotelcalifornia_2_01
+        name: hotelcalifornia
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/hotelcalifornia_phi270.wav
+        stimuli:
+          C1: configs/resources/stimuli/hotelcalifornia_phi000.wav
+    -
+      - type: paired_comparison
+        id: hotelcalifornia_2_02
+        name: hotelcalifornia
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/hotelcalifornia_phi000.wav
+        stimuli:
+          C1: configs/resources/stimuli/hotelcalifornia_phi270.wav
+    -
+      - type: paired_comparison
+        id: hotelcalifornia_2_03
+        name: hotelcalifornia
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/hotelcalifornia_phi000.wav
+        stimuli:
+          C1: configs/resources/stimuli/hotelcalifornia_phi270.wav
+    -
+      - type: paired_comparison
+        id: hotelcalifornia_2_04
+        name: hotelcalifornia
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/hotelcalifornia_phi000.wav
+        stimuli:
+          C1: configs/resources/stimuli/hotelcalifornia_phi270.wav
+    -
+      - type: paired_comparison
+        id: hotelcalifornia_2_05
+        name: hotelcalifornia
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/hotelcalifornia_phi270.wav
+        stimuli:
+          C1: configs/resources/stimuli/hotelcalifornia_phi000.wav
+  - type: finish
+    name: Fertig :-)
+    content: Herzlichen Dank!
+    showResults: false
+    writeResults: true
+    questionnaire:
+        - type: number
+          label: VP-Nummer
+          name: vp_id
+          default: 0
+        - type: number
+          label: Alter
+          name: age
+          min: 20
+          max: 60
+          default: 17
+        - type: likert
+          label: Geschlecht
+          name: gender
+          response:
+            - value: other
+              label: divers
+            - value: female
+              label: weiblich
+            - value: male
+              label: männlich

@@ -1,0 +1,150 @@
+ID 0, Trial: 0/30:
+castanets0
+reference: castanets_phi000
+treatment: castanets_phi270
+
+ID 1, Trial: 1/30:
+castanets1
+reference: castanets_phi270
+treatment: castanets_phi000
+
+ID 2, Trial: 2/30:
+castanets2
+reference: castanets_phi270
+treatment: castanets_phi000
+
+ID 3, Trial: 3/30:
+castanets3
+reference: castanets_phi000
+treatment: castanets_phi270
+
+ID 4, Trial: 4/30:
+castanets4
+reference: castanets_phi270
+treatment: castanets_phi000
+
+ID 5, Trial: 5/30:
+castanets5
+reference: castanets_phi000
+treatment: castanets_phi270
+
+ID 0, Trial: 6/30:
+square_a0
+reference: square_a_phi270
+treatment: square_a_phi000
+
+ID 1, Trial: 7/30:
+square_a1
+reference: square_a_phi000
+treatment: square_a_phi270
+
+ID 2, Trial: 8/30:
+square_a2
+reference: square_a_phi270
+treatment: square_a_phi000
+
+ID 3, Trial: 9/30:
+square_a3
+reference: square_a_phi000
+treatment: square_a_phi270
+
+ID 4, Trial: 10/30:
+square_a4
+reference: square_a_phi270
+treatment: square_a_phi000
+
+ID 5, Trial: 11/30:
+square_a5
+reference: square_a_phi000
+treatment: square_a_phi270
+
+ID 0, Trial: 12/30:
+square_b0
+reference: square_b_phi315
+treatment: square_b_phi000
+
+ID 1, Trial: 13/30:
+square_b1
+reference: square_b_phi000
+treatment: square_b_phi315
+
+ID 2, Trial: 14/30:
+square_b2
+reference: square_b_phi315
+treatment: square_b_phi000
+
+ID 3, Trial: 15/30:
+square_b3
+reference: square_b_phi000
+treatment: square_b_phi315
+
+ID 4, Trial: 16/30:
+square_b4
+reference: square_b_phi000
+treatment: square_b_phi315
+
+ID 5, Trial: 17/30:
+square_b5
+reference: square_b_phi315
+treatment: square_b_phi000
+
+ID 0, Trial: 18/30:
+pnoise0
+reference: pnoise_phi000
+treatment: pnoise_phi270
+
+ID 1, Trial: 19/30:
+pnoise1
+reference: pnoise_phi000
+treatment: pnoise_phi270
+
+ID 2, Trial: 20/30:
+pnoise2
+reference: pnoise_phi000
+treatment: pnoise_phi270
+
+ID 3, Trial: 21/30:
+pnoise3
+reference: pnoise_phi270
+treatment: pnoise_phi000
+
+ID 4, Trial: 22/30:
+pnoise4
+reference: pnoise_phi270
+treatment: pnoise_phi000
+
+ID 5, Trial: 23/30:
+pnoise5
+reference: pnoise_phi270
+treatment: pnoise_phi000
+
+ID 0, Trial: 24/30:
+hotelcalifornia0
+reference: hotelcalifornia_phi270
+treatment: hotelcalifornia_phi000
+
+ID 1, Trial: 25/30:
+hotelcalifornia1
+reference: hotelcalifornia_phi270
+treatment: hotelcalifornia_phi000
+
+ID 2, Trial: 26/30:
+hotelcalifornia2
+reference: hotelcalifornia_phi000
+treatment: hotelcalifornia_phi270
+
+ID 3, Trial: 27/30:
+hotelcalifornia3
+reference: hotelcalifornia_phi000
+treatment: hotelcalifornia_phi270
+
+ID 4, Trial: 28/30:
+hotelcalifornia4
+reference: hotelcalifornia_phi000
+treatment: hotelcalifornia_phi270
+
+ID 5, Trial: 29/30:
+hotelcalifornia5
+reference: hotelcalifornia_phi270
+treatment: hotelcalifornia_phi000
+

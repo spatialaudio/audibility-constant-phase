@@ -1,0 +1,102 @@
+Vielen Dank für die Teilnahme am
+
+Hörversuch Schultz/Hahn August 2019
+
+Einverständniserklärung
+
+Ich gebe hiermit meine freiwillige Zustimmung zur Teilnahme an diesem Hörversuch.
+
+Ich bin damit einverstanden, dass im Rahmen dieses Hörversuchs persönliche Daten
+erhoben werden, und dass diese anonymisiert (d.h. ohne Rückschlussmöglichkeit
+auf meine Person) gespeichert und ausgewertet werden.
+
+Alle im Rahmen des Hörversuchs erhobenen Daten werden streng vertraulich und
+gemäß der Datenschutzrichtlinien behandelt.
+
+Ich kann jederzeit die Löschung meiner erhobenen Daten verlangen.
+
+Ich stimme einer wissenschaftlichen Auswertung der anonymisierten Daten und
+einer Veröffentlichung der Ergebnisse zu.
+
+Ich bin in schriftlicher Form über die Ziele, Methoden und die möglichen Risiken
+dieses Hörversuchs informiert worden.
+
+Ich hatte im Vorfeld Gelegenheit, diesen Hörversuch mit der Versuchsleitung zu
+besprechen und Fragen zu stellen, welche zu meiner Zufriedenheit beantwortet
+worden sind.
+
+
+Datum:	____________________		Unterschrift:	______________________
+
+Hörversuch Schultz/Hahn August 2019
+
+Versuchsperson Nummer:	_______
+
+Alter:				_______
+
+Geschlecht:			_______
+
+bekannte Hörschädigungen:_______________________________________________________
+
+etwaige Anmerkungen zu den Audio-Inhalten (z.B. Cues o.ä.):
+
+
+
+
+
+Versuchshinweise:
+
+Dieser Hörversuch untersucht, ob eine neuartige Manipulation von Audiosignalen
+bezüglich des menschlichen Hörens (un)-unterscheidbar zu einem unbearbeiteten
+Original ist. Die Stimuli werden per High-End Kopfhörer dargeboten. Der
+wahrgenommene Unterschied wird als sehr gering eingeschätzt. Daher erfordert
+der Versuch eine hohe Konzentrationsleistung und benutzt das extrem sensitive
+Design des ABX-Tests.
+Im ABX-Test stehen pro Durchlauf drei kurze Stimuli A, B und X zum
+vergleichenden Hören zur Verfügung, vgl. Abb. 1. Stimulus A und B unterscheiden
+sich voneinander. Stimulus X ist entweder A oder B. Die Aufgabe besteht nach
+kritischem Vergleichshören im Zuweisen A=X oder B=X, gegebenenfalls durch Raten.
+Es wird empfohlen öfter kurze Pausen einzulegen, um den Hörsinn zu erholen und
+die Entscheidungsmerkmale neu zu finden.
+Start und Stop der Stimuli kann entweder mit Mausklick in der GUI erfolgen oder
+per Keyboard getriggert werden. Tastenbelegung:
+
+0...X		1...A		2...B
+
+Die Keyboard Variante unter Nutzung beider Hände (Ziffern auf dem Keyboard
+links oben, Ziffernblock rechts unten) wird empfohlen, weil man von der
+anstrengenden auditiven Erkennungsaufgabe haptisch minimal abgelenkt wird.
+Ein schnelles Umschalten auf einen anderen Stimulus, während ein anderer noch
+läuft, kann durch schnelles zweimaliges Drücken der Tasten 0,1 oder 2 erreicht
+werden. Dies realisiert zunächst Stop des alten und dann Start des neu gewählten
+Stimulus, welcher immer von Beginn abgespielt wird.
+
+Eine Trainingsphase zu Beginn erlaubt das Erlernen der Testumgebung. Dazu wird
+eine ABX-Paarung mit vergleichsweise leicht zu erkennendem Unterschied verwendet.
+Diese Manipulation und dieser Audioinhalt werden nicht im eigentlichen Hörversuch
+verwendet und lassen zudem keinen Rückschluss auf die Fragestellung zu.
+Mutmaßlich sind zu erkennende Unterschiede im Hörversuch subtiler als die der
+Trainingsphase.
+
+Im eigentlichen Hörversuch, werden in willkürlicher Reihenfolge 125
+ABX-Paarungen in 4 Versuchsabschnitten abgefragt. Diese Abschnitte sind getrennt
+von längeren, erzwungenen Erholungspausen. Geschätzte Dauer insgesamt 1-3 h,
+verteilbar auf ein bis zwei Tage.
+
+Risiken:
+Es wird zwar eine moderate Abhörlautstärke (ca. 73 dBALeq) benutzt, aber durch
+die Länge des Versuchs und die Belastung des Gehörs während des Versuchs, bitten
+wir an diesen Tagen auf weitere Hörbelastungen mit hoher Lautstärke (Konzerte,
+Disco, Arbeiten an lauten Maschinen o.ä.) zu verzichten, um die gesetzlich
+zulässige Lärm-Exposition nicht zu überschreiten.
+Im Abhörraum ist es jahreszeit- und architekturbedingt sehr warm und trocken.
+Bitte auf ausreichend Flüssigkeitsaufnahme achten, dafür stehen Getränke bereit.
+Frischluftzufuhr wird durch die Versuchsleitung geregelt, bei konkretem Bedarf
+bitte bescheid geben.
+Um den Fokus auf den Versuch zu erhöhen, kann der Raum abgedunkelt werden.
+Hierfür bitte mit der speziellen Labor-Situation (Achtung: Array im Fluchtweg),
+Entfluchtung (Tür ist links) und dem Not-Lichtschalter vertraut machen.
+
+Viel Spass beim Hören!
+
+Abb. 1: ABX GUI (webMUSHRA AudioLabs Erlangen). Start/Stop: 0...X, 1...A, 2...B.

@@ -1,0 +1,501 @@
+testname: ABX-Test pnoise
+testId: abx_pnoise
+bufferSize: 4096
+stopOnErrors: true
+showButtonPreviousPage: false
+remoteService: service/write.php
+pages:
+  - type: generic
+    id: first_page
+    name: Herzlich Willkommen zu einem spannenden, aber auch sehr anstrengendem ABX-Hörtest.
+    content: Wenn bereit, bitte auf ''Nächste Seite'' klicken.
+  -
+    - random
+    -
+      - type: paired_comparison
+        id: pnoise_0_00
+        name: pnoise
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/pnoise_phi000.wav
+        stimuli:
+          C1: configs/resources/stimuli/pnoise_phi270.wav
+    -
+      - type: paired_comparison
+        id: pnoise_0_01
+        name: pnoise
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/pnoise_phi000.wav
+        stimuli:
+          C1: configs/resources/stimuli/pnoise_phi270.wav
+    -
+      - type: paired_comparison
+        id: pnoise_0_02
+        name: pnoise
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/pnoise_phi270.wav
+        stimuli:
+          C1: configs/resources/stimuli/pnoise_phi000.wav
+    -
+      - type: paired_comparison
+        id: pnoise_0_03
+        name: pnoise
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/pnoise_phi270.wav
+        stimuli:
+          C1: configs/resources/stimuli/pnoise_phi000.wav
+    -
+      - type: paired_comparison
+        id: pnoise_0_04
+        name: pnoise
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/pnoise_phi270.wav
+        stimuli:
+          C1: configs/resources/stimuli/pnoise_phi000.wav
+    -
+      - type: paired_comparison
+        id: pnoise_0_05
+        name: pnoise
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/pnoise_phi000.wav
+        stimuli:
+          C1: configs/resources/stimuli/pnoise_phi270.wav
+    -
+      - type: paired_comparison
+        id: pnoise_0_06
+        name: pnoise
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/pnoise_phi000.wav
+        stimuli:
+          C1: configs/resources/stimuli/pnoise_phi270.wav
+    -
+      - type: paired_comparison
+        id: pnoise_0_07
+        name: pnoise
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/pnoise_phi000.wav
+        stimuli:
+          C1: configs/resources/stimuli/pnoise_phi270.wav
+    -
+      - type: paired_comparison
+        id: pnoise_0_08
+        name: pnoise
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/pnoise_phi000.wav
+        stimuli:
+          C1: configs/resources/stimuli/pnoise_phi270.wav
+    -
+      - type: paired_comparison
+        id: pnoise_0_09
+        name: pnoise
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/pnoise_phi000.wav
+        stimuli:
+          C1: configs/resources/stimuli/pnoise_phi270.wav
+    -
+      - type: paired_comparison
+        id: pnoise_0_10
+        name: pnoise
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/pnoise_phi270.wav
+        stimuli:
+          C1: configs/resources/stimuli/pnoise_phi000.wav
+    -
+      - type: paired_comparison
+        id: pnoise_0_11
+        name: pnoise
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/pnoise_phi000.wav
+        stimuli:
+          C1: configs/resources/stimuli/pnoise_phi270.wav
+    -
+      - type: paired_comparison
+        id: pnoise_0_12
+        name: pnoise
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/pnoise_phi000.wav
+        stimuli:
+          C1: configs/resources/stimuli/pnoise_phi270.wav
+    -
+      - type: paired_comparison
+        id: pnoise_0_13
+        name: pnoise
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/pnoise_phi000.wav
+        stimuli:
+          C1: configs/resources/stimuli/pnoise_phi270.wav
+    -
+      - type: paired_comparison
+        id: pnoise_0_14
+        name: pnoise
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/pnoise_phi270.wav
+        stimuli:
+          C1: configs/resources/stimuli/pnoise_phi000.wav
+    -
+      - type: paired_comparison
+        id: pnoise_0_15
+        name: pnoise
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/pnoise_phi000.wav
+        stimuli:
+          C1: configs/resources/stimuli/pnoise_phi270.wav
+    -
+      - type: paired_comparison
+        id: pnoise_0_16
+        name: pnoise
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/pnoise_phi000.wav
+        stimuli:
+          C1: configs/resources/stimuli/pnoise_phi270.wav
+    -
+      - type: paired_comparison
+        id: pnoise_0_17
+        name: pnoise
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/pnoise_phi270.wav
+        stimuli:
+          C1: configs/resources/stimuli/pnoise_phi000.wav
+    -
+      - type: paired_comparison
+        id: pnoise_0_18
+        name: pnoise
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/pnoise_phi000.wav
+        stimuli:
+          C1: configs/resources/stimuli/pnoise_phi270.wav
+    -
+      - type: paired_comparison
+        id: pnoise_0_19
+        name: pnoise
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/pnoise_phi270.wav
+        stimuli:
+          C1: configs/resources/stimuli/pnoise_phi000.wav
+    -
+      - type: paired_comparison
+        id: pnoise_0_20
+        name: pnoise
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/pnoise_phi000.wav
+        stimuli:
+          C1: configs/resources/stimuli/pnoise_phi270.wav
+    -
+      - type: paired_comparison
+        id: pnoise_0_21
+        name: pnoise
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/pnoise_phi270.wav
+        stimuli:
+          C1: configs/resources/stimuli/pnoise_phi000.wav
+    -
+      - type: paired_comparison
+        id: pnoise_0_22
+        name: pnoise
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/pnoise_phi270.wav
+        stimuli:
+          C1: configs/resources/stimuli/pnoise_phi000.wav
+    -
+      - type: paired_comparison
+        id: pnoise_0_23
+        name: pnoise
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/pnoise_phi270.wav
+        stimuli:
+          C1: configs/resources/stimuli/pnoise_phi000.wav
+    -
+      - type: paired_comparison
+        id: pnoise_0_24
+        name: pnoise
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/pnoise_phi000.wav
+        stimuli:
+          C1: configs/resources/stimuli/pnoise_phi270.wav
+    -
+      - type: paired_comparison
+        id: pnoise_0_25
+        name: pnoise
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/pnoise_phi000.wav
+        stimuli:
+          C1: configs/resources/stimuli/pnoise_phi270.wav
+    -
+      - type: paired_comparison
+        id: pnoise_0_26
+        name: pnoise
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/pnoise_phi000.wav
+        stimuli:
+          C1: configs/resources/stimuli/pnoise_phi270.wav
+    -
+      - type: paired_comparison
+        id: pnoise_0_27
+        name: pnoise
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/pnoise_phi270.wav
+        stimuli:
+          C1: configs/resources/stimuli/pnoise_phi000.wav
+    -
+      - type: paired_comparison
+        id: pnoise_0_28
+        name: pnoise
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/pnoise_phi000.wav
+        stimuli:
+          C1: configs/resources/stimuli/pnoise_phi270.wav
+    -
+      - type: paired_comparison
+        id: pnoise_0_29
+        name: pnoise
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/pnoise_phi270.wav
+        stimuli:
+          C1: configs/resources/stimuli/pnoise_phi000.wav
+    -
+      - type: paired_comparison
+        id: pnoise_0_30
+        name: pnoise
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/pnoise_phi270.wav
+        stimuli:
+          C1: configs/resources/stimuli/pnoise_phi000.wav
+    -
+      - type: paired_comparison
+        id: pnoise_0_31
+        name: pnoise
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/pnoise_phi270.wav
+        stimuli:
+          C1: configs/resources/stimuli/pnoise_phi000.wav
+    -
+      - type: paired_comparison
+        id: pnoise_0_32
+        name: pnoise
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/pnoise_phi270.wav
+        stimuli:
+          C1: configs/resources/stimuli/pnoise_phi000.wav
+    -
+      - type: paired_comparison
+        id: pnoise_0_33
+        name: pnoise
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/pnoise_phi270.wav
+        stimuli:
+          C1: configs/resources/stimuli/pnoise_phi000.wav
+    -
+      - type: paired_comparison
+        id: pnoise_0_34
+        name: pnoise
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/pnoise_phi270.wav
+        stimuli:
+          C1: configs/resources/stimuli/pnoise_phi000.wav
+    -
+      - type: paired_comparison
+        id: pnoise_0_35
+        name: pnoise
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/pnoise_phi270.wav
+        stimuli:
+          C1: configs/resources/stimuli/pnoise_phi000.wav
+    -
+      - type: paired_comparison
+        id: pnoise_0_36
+        name: pnoise
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/pnoise_phi000.wav
+        stimuli:
+          C1: configs/resources/stimuli/pnoise_phi270.wav
+    -
+      - type: paired_comparison
+        id: pnoise_0_37
+        name: pnoise
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/pnoise_phi000.wav
+        stimuli:
+          C1: configs/resources/stimuli/pnoise_phi270.wav
+    -
+      - type: paired_comparison
+        id: pnoise_0_38
+        name: pnoise
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/pnoise_phi270.wav
+        stimuli:
+          C1: configs/resources/stimuli/pnoise_phi000.wav
+    -
+      - type: paired_comparison
+        id: pnoise_0_39
+        name: pnoise
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/pnoise_phi270.wav
+        stimuli:
+          C1: configs/resources/stimuli/pnoise_phi000.wav
+    -
+      - type: paired_comparison
+        id: pnoise_0_40
+        name: pnoise
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/pnoise_phi000.wav
+        stimuli:
+          C1: configs/resources/stimuli/pnoise_phi270.wav
+    -
+      - type: paired_comparison
+        id: pnoise_0_41
+        name: pnoise
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/pnoise_phi270.wav
+        stimuli:
+          C1: configs/resources/stimuli/pnoise_phi000.wav
+  - type: finish
+    name: Fertig :-)
+    content: Herzlichen Dank!
+    showResults: false
+    writeResults: true
+    questionnaire:
+        - type: number
+          label: VP-Nummer
+          name: vp_id
+          default: 0
+        - type: number
+          label: Alter
+          name: age
+          min: 20
+          max: 60
+          default: 17
+        - type: likert
+          label: Geschlecht
+          name: gender
+          response:
+            - value: other
+              label: divers
+            - value: female
+              label: weiblich
+            - value: male
+              label: männlich

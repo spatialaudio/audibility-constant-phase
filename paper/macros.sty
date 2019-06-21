@@ -1,0 +1,60 @@
+\ProvidesPackage{macros}
+
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage{mathtools}
+\RequirePackage{tikz}
+
+% Caculus
+\newcommand{\dd}{\text{d}}
+\newcommand{\deriv}[2]{\tfrac{\dd{#1}}{\dd{#2}}}
+\newcommand{\Deriv}[2]{\frac{\dd{#1}}{\dd{#2}}}
+
+% Functions
+\newcommand{\sgn}[1]{\text{sgn}_{#1}}
+\newcommand{\abs}[1]{\left\vert{#1}\right\vert}
+
+% Operations
+\newcommand{\convn}{\ast_{n}}
+
+% Variables
+\newcommand{\wc}{\tfrac{\omega}{c}}
+\newcommand{\WC}{\frac{\omega}{c}}
+\newcommand{\hphi}{h_{\varphi}}
+\newcommand{\hh}{h_{\Hilbert}}
+\newcommand{\Hphi}{H_{\varphi}}
+\newcommand{\Hi}{H_\mathcal{I}}
+\newcommand{\Hh}{H_{\Hilbert}}
+\newcommand{\periodic}[1]{\tilde{#1}}
+\newcommand{\speri}{\periodic{s}}
+\newcommand{\yperi}{\periodic{y}}
+\newcommand{\hperi}{\periodic{h}}
+\newcommand{\Hnull}{\mathcal{H}_{0}}
+
+% Constants
+\newcommand{\fs}{{f}_{s}}
+
+% Transforms
+\newcommand{\FT}[1]{\mathcal{F}\left\{{#1}\right\}}
+\newcommand{\iFT}[1]{\mathcal{F}^{-1}\left\{{#1}\right\}}
+
+% sub-/superscripts
+\newcommand{\Hilbert}{\mathrm{H}}
+
+% Abbreviations
+\newcommand{\CF}{\text{CF}}
+\newcommand{\rms}{\text{rms}}
+
+% drawings
+\definecolor{colnonzero}{HTML}{1F77B4}  % 'C0' color in matplotlib
+\definecolor{colzero}{HTML}{BCBD22} % 'C8' color in matplotlib
+\definecolor{colhnull}{rgb}{0.8702, 0.9488, 0.9276} % H_0 area
+\newcommand{\stem}[1]{\protect\tikz{
+    \protect\draw[draw={#1}, line width=0.8pt] (-0.1, 0) -- (0.1, 0) {};
+    \protect\draw[draw={#1}, line width=0.8pt] (0, 0) -- (0, 0.15) {};
+    \protect\node[fill={#1}, circle, inner sep=0.5mm] at (0, 0.15) {};
+    }}
+\newcommand{\cflabel}{\protect\tikz{
+    \protect\draw[draw=Gray, line width=1pt] (-0.2, 0) -- (0.2, 0) {};
+    \protect\node[fill=Gray, circle, inner sep=0.75mm] at (0, 0) {};
+    }}

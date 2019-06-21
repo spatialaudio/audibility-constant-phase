@@ -1,0 +1,59 @@
+How To Hörversuch
+
+Vor dem Einschalten Mac Mini unbedingt drauf achten, dass HD 800 nicht
+angeschlossen ist (Einschaltknackser vermeiden)
+
+user: 
+pw: 
+
+RME FireFace
+check: 44.1 kHz, -10 dBV Phones out Sensitivity, -oo dB Fader Gain Out Ch 7/8
+(Phones)
+
+HD 800 anschließen
+
+Terminal:
+>> cd git/audibility-constant-phase/abx_software/webMUSHRA_c929877_20180814/
+
+Webserver starten mit:
+>> php -S localhost:8000
+Webserver stoppen mit Ctrl+C
+
+
+Oper Browser starten
+im Speed-Dial (unter View oder Plus neben dem Tab)
+-Taining
+-Teil 0
+-Teil 1
+-Teil 2
+-Teil 3
+aufrufen
+
+http://localhost:8000/?config=ABX_SchultzHahn19_Training.yaml
+usw.
+
+
+Wenn ein Versuch komplett beendet wird, crasht der Webserver, dann muss man ihn
+neu starten mit php -S localhost:8000
+
+Training antesten und Phone Out Gain -10dB (entweder am Poti oder im TotalMix)
+
+Nach erfolgreichem Test und Schreiben der Ergebnisse in die Datei 
+
+git/audibility-constant-phase/abx_software/webMUSHRA_c929877_20180814/results/abx_constant_phase_shift/paired_comparison.csv
+
+, diese per git committen und pushen als Backup und Archiv.
+
+
+Auswertung der Ergebnisse:
+Terminal
+>> conda activate icsa
+>> cd git/audibility-constant-phase/abx_software/webMUSHRA_c929877_20180814/configs/
+>> jupyter notebook
+
+starten Phase_ABX_analysis.ipynb
+
+run complete Notebook
+
+Vor dem Shut Down des Mac Mini unbedingt drauf achten, dass HD 800 nicht mehr
+angeschlossen ist (Ausschaltknackser vermeiden).

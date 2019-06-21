@@ -1,0 +1,94 @@
+\documentclass[conference,10pt]{IEEEtran}
+\IEEEoverridecommandlockouts
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\graphicspath{./graphics/}
+\usepackage{tabularx}
+\usepackage{cite}
+\usepackage{url}
+\usepackage{enumerate}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{wasysym}
+\usepackage{gensymb}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\usepgfplotslibrary{groupplots}
+\usepgfplotslibrary{dateplot}
+\usepackage{macros}
+\def\NewL{\\\noindent\hspace*{5mm}}
+\begin{document}
+\title{Detection of Constant Phase Shifts in\\Filters for Sound Field Synthesis\\
+{\footnotesize Submission as abstract reviewed paper for 5th International
+Conference on Spatial Audio (ICSA), Ilmenau, Germany, September 2019}}
+\author{\IEEEauthorblockN{Frank Schultz, Nara Hahn, Sascha Spors}
+\IEEEauthorblockA{\textit{Institute of Communications Engineering,
+University of Rostock}\\
+Rostock, Germany\\
+\{frank.schultz, nara.hahn, sascha.spors\}@uni-rostock.de}
+}
+\maketitle
+\thispagestyle{plain}
+\pagestyle{plain}
+\begin{abstract}
+\input{sections/abstract.tex}
+\end{abstract}
+\begin{IEEEkeywords}
+constant phase shift, fractional Hilbert transform, audibility of phase distortion
+\end{IEEEkeywords}
+\input{sections/introduction.tex}
+\input{sections/constant-phase-shift.tex}
+\input{sections/listening-experiment.tex}
+\input{sections/conclusion.tex}
+\input{sections/open-science.tex}
+\renewcommand\refname{}
+\section{References}
+\bibliographystyle{IEEEtran}
+\bibliography{bibliography}
+
+\section*{Submitted Abstract}
+The submitted abstract slightly varies from the final abstract, since not all
+referred results found their way into the final version of the paper.
+Therefore, we provide the submitted abstract as follows:
+%
+\NewL Filters with constant phase shift, often in conjunction with +-3/6 dB
+amplitude decay per octave, frequently occur in sound field synthesis and
+sound reinforcement applications.
+%
+These ideal filters are known as (half) differentiators/integrators and exhibit
+zero group delay and +-45/90 degree phase shift.
+%
+It is well known that certain group delay distortions in electro-acoustic
+systems are audible for trained listeners for critical audio stimuli, such as
+transient, impulse-like and square wave signals.
+%
+It is of interest if linear distortion by a constant phase shift is audible
+as well.
+%
+For that, we conducted a series of ABX listening tests, diotically presenting
+non-phase shifted references against their treatments with different phase
+shifts.
+%
+The experiments revealed that (similar to group delay) for the critical
+square waves, this can be clearly detected, which generally depends on the
+amount of constant phase.
+%
+Here, -90 degree (Hilbert transform) is comparably easier to detect than other
+phase shifts. For castanets and pink-noise shaped Dirac impulse, the detection
+rate tends to guessing for most listeners, although the polarity inversion
+(+-180) is detectable, thereby confirming earlier studies on this topic.
+%
+Our results motivate to apply constant phase shift filters to ensure that also
+the most critical signals are technically reproduced  as best as possible
+(cf. modern electronic dance music with typical crest factor of as low as 6 dB).
+%
+In the paper, we furthermore give the analytical expressions for continuous
+and discrete-time infinite impulse responses for unit magnitude filter with
+arbitrary constant phase shift.
+
+Submitted: Jun 23, 21:37 GMT
+
+Last update:Jun 24, 07:06 GMT
+\end{document}

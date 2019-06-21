@@ -1,0 +1,20 @@
+ID 0, Trial: 0/4:
+pnoise0
+reference: pnoise_ref
+treatment: pnoise_treat
+
+ID 1, Trial: 1/4:
+pnoise1
+reference: pnoise_ref
+treatment: pnoise_treat
+
+ID 2, Trial: 2/4:
+pnoise2
+reference: pnoise_ref
+treatment: pnoise_treat
+
+ID 3, Trial: 3/4:
+pnoise3
+reference: pnoise_ref
+treatment: pnoise_treat
+

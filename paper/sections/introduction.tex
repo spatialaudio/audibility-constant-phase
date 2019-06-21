@@ -1,0 +1,105 @@
+\section{Introduction}
+\label{sec:introduction}
+%
+Sound reproduction systems for large audiences
+are often equipped with vertical loudspeaker arrays
+which shall deliver an equally pleasant acoustic experience
+to the audience in terms of loudness, timbre and spatial impression.
+The reproduced wavefront can be steered and shaped towards the target region
+by applying delays and weights to the individual loudspeaker signals~\cite{Meyer1984a, Meyer1990}.
+%
+Due to the coherence of these,
+the sound field typically exhibits a low-pass filter characteristic,
+and thus needs to be equalized by high-pass filtering the audio input signal.
+As pointed out in \cite[Ch.~3]{schultz2016diss},
+the same array processing framework is used in wave field synthesis (WFS),
+which has only seemingly a different goal,
+namely the physical reconstruction of a desired sound field.
+The loudspeaker signals for WFS are derived from
+a high-frequency approximation of
+the Kirchhoff-Helmholtz integral equation~\cite{spors2008revisited, zotter2013}.
+%
+This enables a computationally efficient implementation of WFS
+which comprises of, similar to large-scale sound reproduction,
+delays and weights for the individual loudspeakers
+and an overall equalization filter.
+%
+\NewL According to the theory of WFS~\cite{spors2008revisited},
+the specification of the equalization filter
+depends on the geometry and shape of the loudspeaker array.
+The transfer function is $i\omega$ for 3D scenarios
+where 2D arrays (e.g. spherical or planar) are used.
+In terms of signals and systems theory this constitutes an differentiator,
+exhibiting a slope of $+6$~dB per octave
+and a constant phase of $90\degree$.
+For 2D scenarios using 1D arrays (e.g. circular and linear),
+the filter is given as $\sqrt{i\omega}$, constituting a half-differentiator
+\cite{Tseng2000,Krishna2011},
+where both the slope and phase are halved to
+$+3$~dB per octave and $45\degree$, respectively.
+%
+\NewL In practical systems, where a continuous and infinite array cannot be used,
+the specification of the equalization filter has to be adjusted accordingly.
+The usage of a practical array built from individual loudspeakers causes
+spectral fluctuations above the so-called spatial aliasing frequency~\cite{spors2008revisited}.
+Moreover, due to the finite extent of the array,
+the synthesized sound field exhibits a low frequency roll off.
+The high-pass filter characteristic of an ideal equalization filter
+thus should be flatten out at the highest and lowest frequencies in the spectrum,
+resulting in a high-pass shelving filter.
+The upper limit coincides with the spatial aliasing frequency
+and the lower limit is determined by the spatial extent of the array~\cite{spors2010}.
+%
+\NewL The digital equalization filter is typically realized either in
+a finite impulse response (FIR) or
+infinite impulse response (IIR) form.
+FIR type equalization filters are often designed as linear phase,
+while omitting the above mentioned constant phase ($90\degree$ or $45\degree$)
+\cite{wierstorf2014diss, winter2019diss}.
+This results in synthesized sound fields exhibiting
+a negative phase shift ($-90\degree$ or $-45\degree$)
+compared to the desired reference sound field
+(apart from the group delay of the FIR filter).
+There are also a number of IIR type equalization filters
+where the constant phase spectrum is explicitly taken into account
+\cite{salvador2010}
+or comes as a byproduct of the minimum phase characteristics of the desired
+magnitude spectrum \cite{schultz2013daga, schultz2016diss}.
+The improved physical accuracy in the synthesized sound field
+is well demonstrated in \cite[Fig.~9-11]{schultz2013daga}.
+%
+\NewL The audibility of constant phase shifts can be regarded as special issue
+of the audibility of phase distortion and group delay distortion, cf.
+\cite{Hansen1974_1, Hansen1974_2,Blauert1978,Suzuki1980,Lipshitz1982, Moeller2007},
+often evaluated with allpass filters.
+%
+From these works it is known, that audibility is strongly dependent of the
+signal's waveform and spectrum and the amount of the group delay in the
+critical bands.
+%
+Generally, sensitivity for phase/group delay distortions decreases with increasing
+frequency.
+%
+For low frequency content a different pitch and for high frequency content
+ringing and different lateralization is reported for group delay distortions.
+%
+The polarity of highly transient signals plays a role for the audibility.
+%
+It was often shown, that training on phase/group delay distorted audio content
+increases the sensitivity to detect them.
+%
+\NewL To the authors' knowledge to date,
+the perceptual impact of the constant phase shift
+has not been studied yet.
+It is of great interest whether the existence or absence of such a phase shift
+is audible, and in the special context of sound field synthesis, if this
+affects the authenticity of the synthesized sound fields.
+%
+The paper discusses the signal processing fundamentals of discrete-time constant
+phase shift in Sec.~II.
+%
+In Sec.~III a listening test is presented for selected audio
+content and phase shifts to initially evaluate the audibility of constant phase
+shifts.
+%
+Sec.~IV concludes the paper.

@@ -1,0 +1,62 @@
+testname: Herzlich Willkommen zum ABX-Test Training
+testId: abx_training
+bufferSize: 4096
+stopOnErrors: true
+showButtonPreviousPage: false
+remoteService: service/write.php
+pages:
+  - type: generic
+    id: first_page
+    name: Tastatur Start/Stop: 0...Stimulus X,  1...Stimulus A,  2...Stimulus B
+    content: Wenn bereit, bitte auf ''Nächste Seite'' klicken.
+  -
+    - random
+    -
+      - type: paired_comparison
+        id: pnoise_0_00
+        name: pnoise
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/pnoise_ref.wav
+        stimuli:
+          C1: configs/resources/stimuli/pnoise_treat.wav
+    -
+      - type: paired_comparison
+        id: pnoise_0_01
+        name: pnoise
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/pnoise_ref.wav
+        stimuli:
+          C1: configs/resources/stimuli/pnoise_treat.wav
+    -
+      - type: paired_comparison
+        id: pnoise_0_02
+        name: pnoise
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/pnoise_ref.wav
+        stimuli:
+          C1: configs/resources/stimuli/pnoise_treat.wav
+    -
+      - type: paired_comparison
+        id: pnoise_0_03
+        name: pnoise
+        unforced: false
+        content: Ist A = X oder B = X ?
+        showWaveform: false
+        enableLooping: false
+        reference: configs/resources/stimuli/pnoise_ref.wav
+        stimuli:
+          C1: configs/resources/stimuli/pnoise_treat.wav
+  - type: finish
+    name: Training Fertig :-)
+    content: Herzlichen Dank!
+    showResults: true
+    writeResults: false

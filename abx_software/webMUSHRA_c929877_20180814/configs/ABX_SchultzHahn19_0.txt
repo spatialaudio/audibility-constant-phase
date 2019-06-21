@@ -1,0 +1,175 @@
+ID 0, Trial: 0/35:
+castanets0
+reference: castanets_phi000
+treatment: castanets_phi270
+
+ID 1, Trial: 1/35:
+castanets1
+reference: castanets_phi270
+treatment: castanets_phi000
+
+ID 2, Trial: 2/35:
+castanets2
+reference: castanets_phi270
+treatment: castanets_phi000
+
+ID 3, Trial: 3/35:
+castanets3
+reference: castanets_phi000
+treatment: castanets_phi270
+
+ID 4, Trial: 4/35:
+castanets4
+reference: castanets_phi000
+treatment: castanets_phi270
+
+ID 5, Trial: 5/35:
+castanets5
+reference: castanets_phi000
+treatment: castanets_phi270
+
+ID 6, Trial: 6/35:
+castanets6
+reference: castanets_phi270
+treatment: castanets_phi000
+
+ID 0, Trial: 7/35:
+square_a0
+reference: square_a_phi000
+treatment: square_a_phi270
+
+ID 1, Trial: 8/35:
+square_a1
+reference: square_a_phi000
+treatment: square_a_phi270
+
+ID 2, Trial: 9/35:
+square_a2
+reference: square_a_phi270
+treatment: square_a_phi000
+
+ID 3, Trial: 10/35:
+square_a3
+reference: square_a_phi270
+treatment: square_a_phi000
+
+ID 4, Trial: 11/35:
+square_a4
+reference: square_a_phi270
+treatment: square_a_phi000
+
+ID 5, Trial: 12/35:
+square_a5
+reference: square_a_phi000
+treatment: square_a_phi270
+
+ID 6, Trial: 13/35:
+square_a6
+reference: square_a_phi000
+treatment: square_a_phi270
+
+ID 0, Trial: 14/35:
+square_b0
+reference: square_b_phi315
+treatment: square_b_phi000
+
+ID 1, Trial: 15/35:
+square_b1
+reference: square_b_phi000
+treatment: square_b_phi315
+
+ID 2, Trial: 16/35:
+square_b2
+reference: square_b_phi000
+treatment: square_b_phi315
+
+ID 3, Trial: 17/35:
+square_b3
+reference: square_b_phi315
+treatment: square_b_phi000
+
+ID 4, Trial: 18/35:
+square_b4
+reference: square_b_phi000
+treatment: square_b_phi315
+
+ID 5, Trial: 19/35:
+square_b5
+reference: square_b_phi000
+treatment: square_b_phi315
+
+ID 6, Trial: 20/35:
+square_b6
+reference: square_b_phi315
+treatment: square_b_phi000
+
+ID 0, Trial: 21/35:
+pnoise0
+reference: pnoise_phi270
+treatment: pnoise_phi000
+
+ID 1, Trial: 22/35:
+pnoise1
+reference: pnoise_phi270
+treatment: pnoise_phi000
+
+ID 2, Trial: 23/35:
+pnoise2
+reference: pnoise_phi000
+treatment: pnoise_phi270
+
+ID 3, Trial: 24/35:
+pnoise3
+reference: pnoise_phi000
+treatment: pnoise_phi270
+
+ID 4, Trial: 25/35:
+pnoise4
+reference: pnoise_phi000
+treatment: pnoise_phi270
+
+ID 5, Trial: 26/35:
+pnoise5
+reference: pnoise_phi000
+treatment: pnoise_phi270
+
+ID 6, Trial: 27/35:
+pnoise6
+reference: pnoise_phi270
+treatment: pnoise_phi000
+
+ID 0, Trial: 28/35:
+hotelcalifornia0
+reference: hotelcalifornia_phi000
+treatment: hotelcalifornia_phi270
+
+ID 1, Trial: 29/35:
+hotelcalifornia1
+reference: hotelcalifornia_phi270
+treatment: hotelcalifornia_phi000
+
+ID 2, Trial: 30/35:
+hotelcalifornia2
+reference: hotelcalifornia_phi000
+treatment: hotelcalifornia_phi270
+
+ID 3, Trial: 31/35:
+hotelcalifornia3
+reference: hotelcalifornia_phi270
+treatment: hotelcalifornia_phi000
+
+ID 4, Trial: 32/35:
+hotelcalifornia4
+reference: hotelcalifornia_phi000
+treatment: hotelcalifornia_phi270
+
+ID 5, Trial: 33/35:
+hotelcalifornia5
+reference: hotelcalifornia_phi000
+treatment: hotelcalifornia_phi270
+
+ID 6, Trial: 34/35:
+hotelcalifornia6
+reference: hotelcalifornia_phi270
+treatment: hotelcalifornia_phi000
+
