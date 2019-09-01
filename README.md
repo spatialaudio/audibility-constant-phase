@@ -1,6 +1,11 @@
 # audibility-constant-phase
 Audibility of Constant Phase Shifts in Audio Signals
 
+The compiled paper can be found on our [blog](
+http://spatialaudio.net/paper-detection-of-constant-phase-shifts-in-filters-for-sound-field-synthesis/)
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3383286.svg)](https://doi.org/10.5281/zenodo.3383286)
+
 ## Theory
 Filters with unit magnitude (except for DC) and constant phase shift are known as
 fractional Hilbert transforms.
@@ -31,8 +36,7 @@ All information is thus archived in the Github hosted repository
 
 https://github.com/spatialaudio/audibility-constant-phase
 
-under the CC BY 4.0 and MIT license. The DOI: TBD refers to the repository
-state when submitting the paper.
+under the CC BY 4.0 and MIT license. [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3383286.svg)](https://doi.org/10.5281/zenodo.3383286) refers to the repository state when submitting the paper.
 
 We provide single modifications of the webMUSHRA software [![DOI](https://zenodo.org/badge/81722942.svg)](https://zenodo.org/badge/latestdoi/81722942), thus explicitly
 indicating the usage of a "Third-Party Modified Version of the webMUSHRA Software"
