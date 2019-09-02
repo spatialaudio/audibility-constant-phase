@@ -3,12 +3,18 @@ import matplotlib.pyplot as plt
 import soundfile as sf
 import util
 from os.path import join
+from scipy.signal import resample
 
 # Audio signal
 dir_src = '../data/source-signals/'
 filename = 'castanets.wav'
 start, stop = 6650, 6850
 s0, fs = sf.read(join(dir_src, filename), start=start, stop=stop)
+
+# Upsampling
+oversample = 2
+s0 = resample(s0, num=len(s0) * oversample)
+fs *= oversample
 
 # Phase angles and shifter order
 phimin, phimax, phinum = 0, 2 * np.pi, 8
