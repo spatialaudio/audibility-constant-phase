@@ -27,11 +27,17 @@ signals = [np.cos(phi) * s0 - np.sin(phi) * sH for phi in phase_angles]
 time = util.n2t(np.arange(len(s0)), fs=fs, ms=True)
 
 fig, ax = plt.subplots(figsize=(12, 6))
-ax.fill_between(time, -envelope, envelope, color='lightgray', label='Envelope')
-for phi, s in zip(phase_angles[1:], signals[1:]):
-    ax.plot(time, s, c=None, lw=1, alpha=0.75,
-            label='{:0.0f}'.format(np.rad2deg(phi)))
-ax.plot(time, s0, c='r', lw=2, label='Original')
+ax.fill_between(time, -envelope, envelope,
+                color=[0.9, 0.9, 0.9], label='Envelope')
+for phi, s in zip(phase_angles, signals):
+    if phi == 0:
+        ax.plot(time, s0, c='C0', lw=2, label='Original')
+    elif phi == 1.5 * np.pi:
+        ax.plot(time, s, c='C3', lw=2,
+                label='{:0.0f} (Hilb.)'.format(np.rad2deg(phi)))
+    else:
+        ax.plot(time, s, c='k', lw=0.5, alpha=0.5,
+                label='{:0.0f}'.format(np.rad2deg(phi)))
 ax.set_xlabel('$t$ / ms')
 ax.legend(title=r'$\varphi$ / $^\circ$', ncol=3)
 ax.set_title('Phase shifted signals and envelope')
