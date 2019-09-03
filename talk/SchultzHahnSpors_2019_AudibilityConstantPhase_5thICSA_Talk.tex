@@ -1,13 +1,15 @@
 \documentclass[mathserif]{intbeamer}
-\usepackage{etex}
+%\usepackage{etex}
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
-\usepackage{qrcode}
-\usepackage[space]{grffile}
+%\usepackage{qrcode}
+%\usepackage[space]{grffile}
 \usepackage{subcaption}
 \captionsetup[subfigure]{skip=-5pt} % global setting for subfigure
-\usepackage{aligned-overset}
+%\usepackage{aligned-overset}
 \usepackage{trfsigns}
+
+\usepackage{../paper/macros}
 
 %% *** Tikz, PGF and AudioIcons ***
 %\usepackage{tikz, audioicons}
@@ -20,7 +22,7 @@
   % intersections,%
   % positioning}
 
-\definecolor{activecolor}{RGB}{255, 0, 0}
+%\definecolor{activecolor}{RGB}{255, 0, 0}
 % \definecolor{loudspeakercircle}{RGB}{236, 236, 236}
 % \definecolor{focuscircle}{RGB}{254, 204, 0}
 % \definecolor{darkgreen}{rgb}{0,0.5,0}
@@ -43,33 +45,33 @@
 % \makeatother
 
 %% *** Importing Stuff ***
-\usepackage{import}
+%\usepackage{import}
 
 %% *** Mathsymbols ***
 %\usepackage{soundfield}
 %\sfrenewsymbol{cylm}{\mu}
 
-\usepackage{nicefrac}
-\DeclareFontFamily{U}{wncy}{}
-\DeclareFontShape{U}{wncy}{m}{n}{<->wncyr10}{}
-\DeclareSymbolFont{mcy}{U}{wncy}{m}{n}
-\DeclareMathSymbol{\Sha}{\mathord}{mcy}{"58}
+%\usepackage{nicefrac}
+%\DeclareFontFamily{U}{wncy}{}
+%\DeclareFontShape{U}{wncy}{m}{n}{<->wncyr10}{}
+%\DeclareSymbolFont{mcy}{U}{wncy}{m}{n}
+%\DeclareMathSymbol{\Sha}{\mathord}{mcy}{"58}
 
 %% *** Additional Commands extending Beamer ***
-\newcommand{\itemplus}[1][+]{\item[\textcolor{darkgreen}{\textbf{#1}}]}
-\newcommand{\itemminus}[1][--]{\item[\textcolor{red}{\textbf{#1}}]}
-\newcommand{\itemattent}[1][!\,]{\item[\textcolor{orange}{\textbf{#1}}]}
-\newcommand{\itemcheck}{\itemplus[$\checkmark$]}
-\newcommand{\itemcross}{\itemminus[$\boldsymbol{\times}$]}
+%\newcommand{\itemplus}[1][+]{\item[\textcolor{darkgreen}{\textbf{#1}}]}
+%\newcommand{\itemminus}[1][--]{\item[\textcolor{red}{\textbf{#1}}]}
+%\newcommand{\itemattent}[1][!\,]{\item[\textcolor{orange}{\textbf{#1}}]}
+%\newcommand{\itemcheck}{\itemplus[$\checkmark$]}
+%\newcommand{\itemcross}{\itemminus[$\boldsymbol{\times}$]}
 
-\newenvironment{itemizeblock}[1]{ %
-  \begin{block}{#1} %
-    \begin{itemize} %
-    } %
-    { %
-    \end{itemize} %
-  \end{block} %
-} %
+%\newenvironment{itemizeblock}[1]{ %
+%  \begin{block}{#1} %
+%    \begin{itemize} %
+%    } %
+%    { %
+%    \end{itemize} %
+%  \end{block} %
+%} %
 
 % ===== titlepage info =====
 \title[Audibility Constant Phase Shifts]%
@@ -95,6 +97,144 @@
 
 \begin{document}
 \maketitle
+%
+%
+%
 \begin{frame}{Introduction}
+\begin{figure}
+\includegraphics[width=\textwidth]{../paper/graphics/spectra_filterorder510}
+\end{figure}
+simple signal flow diagram, SFS filter
+
+\begin{itemize}
+\item  technical issues
+\item perceptual issues
+\end{itemize}
 \end{frame}
+%
+%
+%
+\begin{frame}{Sound Field Synthesis Filter}
+equations and sketches for 3D, 2.5D WFS
+\end{frame}
+%
+%
+%
+\begin{frame}{Types of Phase Distortion}
+min phase
+
+max Phase
+
+linear Phase
+
+zero group delay
+
+constant phase
+
+audibility / perceptibilty of phase / group delay distoritions
+important studies
+
+\end{frame}
+%
+%
+%
+\begin{frame}{Example: Constant Phase Shifts of Castanets}
+\begin{figure}
+\includegraphics[width=\textwidth]{../notebooks/phase-shifted-signals-and-envelope}
+\end{figure}
+\end{frame}
+%
+%
+%
+\begin{frame}{Crest Factor}
+\begin{figure}
+\includegraphics[width=\textwidth]{../paper/graphics/crest-factor-and-square-waves}
+\end{figure}
+\end{frame}
+%
+%
+%
+\begin{frame}{Constant Phase Shift = Fractional Hilbert Transform}
+\begin{align}
+H(e^{i\Omega}) &=
+\begin{cases}
+e^{+i\varphi}, & 0 < \Omega < \pi\\
+e^{-i\varphi}, & -\pi < \Omega < 0\\
+\cos\varphi, & \Omega = 0, \pi
+\end{cases}
+\label{eq:def-dtft}
+\end{align}
+\begin{align}
+H(e^{i\Omega})
+= \cos\varphi
+- \sin\varphi\cdot\Hh(e^{i\Omega}),
+\label{eq:decomp-dtft}
+\end{align}
+with
+$\Hh(e^{i\Omega})\coloneqq-i\cdot\sgn{\Omega}$ denoting
+the transfer function of the Hilbert transformer
+\begin{figure}
+\includegraphics[width=\textwidth]{../paper/graphics/discrete-ir-phi-45}
+\end{figure}
+\end{frame}
+%
+%
+%
+\begin{frame}{Constant Phase Shift for Aperiodic Signals}
+skectch for convolution of infinite with finite signals
+windowing problem
+
+listening examples hotel, pink noise
+
+\end{frame}
+%
+%
+%
+\begin{frame}{Constant Phase Shifts for Periodic Signals}
+skectch DFT frames superosition
+
+listening examples square, castanets
+
+\end{frame}
+%
+%
+%
+\begin{frame}{Listening Experiment}
+
+Is constant phase shift audible?
+
+
+Hypothesis
+
+ABX Test Design Considerations
+
+Post Hoic CHi
+
+\end{frame}
+%
+%
+%
+\begin{frame}{Listening Experiment Org}
+VP, age, time
+
+\end{frame}
+%
+%
+%
+\begin{frame}{Listening Experiment Results}
+\begin{figure}
+\includegraphics[width=0.67\textwidth]{../paper/graphics/scatter}
+\end{figure}
+\end{frame}
+%
+%
+%
+\begin{frame}{Conclusion}
+\end{frame}
+%
+%
+%
+
+
+
 \end{document}
