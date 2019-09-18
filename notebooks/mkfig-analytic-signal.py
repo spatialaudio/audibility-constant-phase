@@ -5,6 +5,34 @@ import util
 from os.path import join
 from scipy.signal import resample
 
+
+def plot_original(time, s0, ax, c='C0', lw=2, label='Original'):
+    ax.plot(time, s0, c=c, lw=lw, label=label, zorder=3)
+
+
+def plot_hilbert(time, sH, ax, c='C3', lw=2, label='Hilbert'):
+    ax.plot(time, sH, c=c, lw=lw, label=label, zorder=3)
+
+
+def plot_envelope(time, envelope, ax, c=[0.9, 0.9, 0.9], label='Envelope'):
+    ax.fill_between(time, -envelope, envelope, color=c, label=label)
+
+
+def plot_phase_shifts(time, phase_angles, signals, ax, c='Gray', lw=0.5):
+    for phi, s in zip(phase_angles, signals):
+        line = ax.plot(time, s, c=c, lw=lw, alpha=1)
+    line[0].set_label('$0,45,...,315$')
+
+
+def decorate(ax, title=None, legend=True):
+    ax.set_xlabel('$t$ / ms')
+    ax.set_xlim(time.min(), time.max())
+    ax.set_ylim(-1, 1)
+    if legend:
+        ax.legend(title=r'$\varphi$ / $^\circ$', ncol=2)
+    ax.set_title(title)
+
+
 # Audio signal
 dir_src = '../data/source-signals/'
 filename = 'castanets.wav'
@@ -29,23 +57,39 @@ envelope = np.sqrt(s0**2 + sH**2)
 # Constant phase shift
 signals = [np.cos(phi) * s0 - np.sin(phi) * sH for phi in phase_angles]
 
-# Plot
-time = util.n2t(np.arange(len(s0)), fs=fs, ms=True)
+# time axis
+time = util.n2t(start + np.arange(len(s0)), fs=fs, ms=True)
 
+
+# Plots
+fmt = 'pdf'
+
+# Original
 fig, ax = plt.subplots(figsize=(12, 6))
-ax.fill_between(time, -envelope, envelope,
-                color=[0.9, 0.9, 0.9], label='Envelope')
-for phi, s in zip(phase_angles, signals):
-    if phi == 0:
-        ax.plot(time, s0, c='C0', lw=2, label='Original')
-    elif phi == 1.5 * np.pi:
-        ax.plot(time, s, c='C3', lw=2,
-                label='{:0.0f} (Hilb.)'.format(np.rad2deg(phi)))
-    else:
-        ax.plot(time, s, c='k', lw=0.5, alpha=0.5,
-                label='{:0.0f}'.format(np.rad2deg(phi)))
-ax.set_xlabel('$t$ / ms')
-ax.legend(title=r'$\varphi$ / $^\circ$', ncol=3)
-ax.set_title('Phase shifted signals and envelope')
-ax.set_xlim(time.min(), time.max())
-plt.savefig('phase-shifted-signals-and-envelope.png', bbox_inches='tight')
+plot_original(time, s0, ax)
+decorate(ax, legend=False)
+plt.savefig('original', bbox_inches='tight', format=fmt)
+
+# Original and Hilbert transform
+plot_hilbert(time, sH, ax)
+decorate(ax, legend=True)
+plt.savefig('original-hilbert', bbox_inches='tight', format=fmt)
+
+# Original, Hilbert transform, and enevelope
+plot_envelope(time, envelope, ax)
+decorate(ax, legend=True)
+plt.savefig('original-hilbert-envelope', bbox_inches='tight', format=fmt)
+
+# Original, Hilbert, envelope, and phase shifted signals
+plot_phase_shifts(time, phase_angles, signals, ax)
+decorate(ax, legend=True)
+plt.savefig('original-hilbert-envelope-phaseshifts',
+            bbox_inches='tight', format=fmt)
+
+
+# Phase shifted signals and envelope
+fig, ax = plt.subplots(figsize=(12, 6))
+plot_phase_shifts(time, phase_angles, signals, ax)
+plot_envelope(time, envelope, ax)
+decorate(ax, legend=True)
+plt.savefig('envelope-phaseshifts', bbox_inches='tight', format=fmt)
