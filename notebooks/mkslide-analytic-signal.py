@@ -2,8 +2,12 @@ import numpy as np
 import matplotlib.pyplot as plt
 import soundfile as sf
 import util
-from os.path import join
 from scipy.signal import resample
+from os import path, mkdir
+
+dir_fig = '../talk/graphics/'
+if not path.exists(dir_fig):
+    mkdir(dir_fig)
 
 
 def plot_original(time, s0, ax, c='C0', lw=2, label='Original'):
@@ -37,7 +41,7 @@ def decorate(ax, title=None, legend=True):
 dir_src = '../data/source-signals/'
 filename = 'castanets.wav'
 start, stop = 6650, 6850
-s0, fs = sf.read(join(dir_src, filename), start=start, stop=stop)
+s0, fs = sf.read(dir_src + filename, start=start, stop=stop)
 
 # Upsampling
 oversample = 2
@@ -68,22 +72,23 @@ fmt = 'pdf'
 fig, ax = plt.subplots(figsize=(12, 6))
 plot_original(time, s0, ax)
 decorate(ax, legend=False)
-plt.savefig('original', bbox_inches='tight', format=fmt)
+plt.savefig(dir_fig + 'original', bbox_inches='tight', format=fmt)
 
 # Original and Hilbert transform
 plot_hilbert(time, sH, ax)
 decorate(ax, legend=True)
-plt.savefig('original-hilbert', bbox_inches='tight', format=fmt)
+plt.savefig(dir_fig + 'original-hilbert', bbox_inches='tight', format=fmt)
 
 # Original, Hilbert transform, and enevelope
 plot_envelope(time, envelope, ax)
 decorate(ax, legend=True)
-plt.savefig('original-hilbert-envelope', bbox_inches='tight', format=fmt)
+plt.savefig(dir_fig + 'original-hilbert-envelope',
+            bbox_inches='tight', format=fmt)
 
 # Original, Hilbert, envelope, and phase shifted signals
 plot_phase_shifts(time, phase_angles, signals, ax)
 decorate(ax, legend=True)
-plt.savefig('original-hilbert-envelope-phaseshifts',
+plt.savefig(dir_fig + 'original-hilbert-envelope-phaseshifts',
             bbox_inches='tight', format=fmt)
 
 
@@ -92,4 +97,4 @@ fig, ax = plt.subplots(figsize=(12, 6))
 plot_phase_shifts(time, phase_angles, signals, ax)
 plot_envelope(time, envelope, ax)
 decorate(ax, legend=True)
-plt.savefig('envelope-phaseshifts', bbox_inches='tight', format=fmt)
+plt.savefig(dir_fig + 'envelope-phaseshifts', bbox_inches='tight', format=fmt)
