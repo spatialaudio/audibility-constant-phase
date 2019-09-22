@@ -69,5 +69,6 @@ ax.set_yticklabels([])
 ax.set_xlim(nmin - 0.5, nmax + 0.5)
 ax.set_ylim(ymin, ymax)
 
-filename = 'periodic-ir.pdf'
-plt.savefig(dir_fig + filename, dpi=300, bbox_inches='tight')
+filename = 'periodic-ir'
+ext = '.pdf'
+plt.savefig(dir_fig + filename + ext, dpi=300, bbox_inches='tight')

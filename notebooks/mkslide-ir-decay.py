@@ -81,6 +81,5 @@ ax2.set_xlim(tmin, tmax)
 ax2.set_xscale('log')
 
 filename = 'amplitude-decay'
-fig_format = 'pdf'
-plt.savefig(dir_fig + filename, dpi=300,
-            bbox_inches='tight', format=fig_format)
+ext = '.pdf'
+plt.savefig(dir_fig + filename + ext, dpi=300, bbox_inches='tight')

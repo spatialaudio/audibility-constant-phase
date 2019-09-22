@@ -66,30 +66,29 @@ time = util.n2t(start + np.arange(len(s0)), fs=fs, ms=True)
 
 
 # Plots
-fmt = 'pdf'
+ext = '.pdf'
 
 # Original
 fig, ax = plt.subplots(figsize=(12, 6))
 plot_original(time, s0, ax)
 decorate(ax, legend=False)
-plt.savefig(dir_fig + 'original', bbox_inches='tight', format=fmt)
+plt.savefig(dir_fig + 'original' + ext, bbox_inches='tight')
 
 # Original and Hilbert transform
 plot_hilbert(time, sH, ax)
 decorate(ax, legend=True)
-plt.savefig(dir_fig + 'original-hilbert', bbox_inches='tight', format=fmt)
+plt.savefig(dir_fig + 'original-hilbert' + ext, bbox_inches='tight')
 
 # Original, Hilbert transform, and enevelope
 plot_envelope(time, envelope, ax)
 decorate(ax, legend=True)
-plt.savefig(dir_fig + 'original-hilbert-envelope',
-            bbox_inches='tight', format=fmt)
+plt.savefig(dir_fig + 'original-hilbert-envelope' + ext, bbox_inches='tight')
 
 # Original, Hilbert, envelope, and phase shifted signals
 plot_phase_shifts(time, phase_angles, signals, ax)
 decorate(ax, legend=True)
-plt.savefig(dir_fig + 'original-hilbert-envelope-phaseshifts',
-            bbox_inches='tight', format=fmt)
+plt.savefig(dir_fig + 'original-hilbert-envelope-phaseshifts' + ext,
+            bbox_inches='tight')
 
 
 # Phase shifted signals and envelope
@@ -97,4 +96,4 @@ fig, ax = plt.subplots(figsize=(12, 6))
 plot_phase_shifts(time, phase_angles, signals, ax)
 plot_envelope(time, envelope, ax)
 decorate(ax, legend=True)
-plt.savefig(dir_fig + 'envelope-phaseshifts', bbox_inches='tight', format=fmt)
+plt.savefig(dir_fig + 'envelope-phaseshifts' + ext, bbox_inches='tight')
