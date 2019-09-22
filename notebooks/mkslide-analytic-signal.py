@@ -10,11 +10,11 @@ if not path.exists(dir_fig):
     mkdir(dir_fig)
 
 
-def plot_original(time, s0, ax, c='C0', lw=2, label='Original'):
+def plot_original(time, s0, ax, c='C3', lw=2, label='Original'):
     ax.plot(time, s0, c=c, lw=lw, label=label, zorder=3)
 
 
-def plot_hilbert(time, sH, ax, c='C3', lw=2, label='Hilbert'):
+def plot_hilbert(time, sH, ax, c='C0', lw=2, label='Hilbert'):
     ax.plot(time, sH, c=c, lw=lw, label=label, zorder=3)
 
 
