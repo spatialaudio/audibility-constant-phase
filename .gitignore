@@ -49,6 +49,7 @@ abx_software/webMUSHRA_c929877_20180814/lib/webmushra/audio/MushraAudioControl.j
 
 # LaTex stuff:
 SchultzHahnSpors_2019_AudibilityConstantPhase_5thICSA_IEEEStyle.pdf
+SchultzHahnSpors_2019_AudibilityConstantPhase_5thICSA_ICSATemplate.pdf
 paper/graphics/*.pdf
 *.aux
 *.fdb_latexmk
