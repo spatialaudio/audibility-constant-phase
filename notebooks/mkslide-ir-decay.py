@@ -67,9 +67,13 @@ ax[1].grid(color='lightgray')
 ax[1].set_xlabel('$n$ / sample')
 ax[1].set_ylabel('Amplitude / dB')
 ax[1].set_xlim(nmin, nmax)
-ax[1].text(1000, -60, r'$\frac{2}{\pi n}$', rotation=-35, fontsize=25)
-ax[1].text(100, util.db(E16), r'16 bit $\Delta_{Q}$', va='bottom')
-ax[1].text(100, util.db(E24), r'24 bit $\Delta_{Q}$', va='bottom')
+p0 = ax[1].transData.transform_point((sample[0], util.db(envelope[0])))
+p1 = ax[1].transData.transform_point((sample[-1], util.db(envelope[-1])))
+dx, dy = p1 - p0
+angle = np.rad2deg(np.arctan2(dy, dx))
+ax[1].text(1000, -60, r'$\frac{2}{\pi n}$', rotation=angle, fontsize=25)
+ax[1].text(100, util.db(E16), r'16-bit noise floor', va='bottom')
+ax[1].text(100, util.db(E24), r'24-bit noise floor', va='bottom')
 
 # secondary x-axis in seconds
 ax2 = ax[1].twiny()
