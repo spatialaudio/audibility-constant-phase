@@ -129,4 +129,8 @@ ax.text(1, y2_chitest + 2 * dy, '***', ha='left', color=col_chitest)
 ax.plot([0, 1], y3, color=col_chitest, marker='|')
 ax.text(0.5, y3_chitest, 'ns', ha='center', va='bottom', color=col_chitest)
 
+ax.text(0, 30, '***: $p<0.001$', ha='left', va='bottom', color=col_chitest)
+ax.text(0, 26, 'ns: not significant', ha='left', va='bottom', color=col_chitest)
+
+
 plt.savefig(dir_fig + 'scatter-with-chitest.pdf', bbox_inches='tight')
