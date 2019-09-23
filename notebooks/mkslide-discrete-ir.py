@@ -1,14 +1,16 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import util
+import importlib
 from matplotlib import rcParams
 from os import path, mkdir
+
+importlib.reload(util)
 
 dir_fig = '../talk/graphics/'
 if not path.exists(dir_fig):
     mkdir(dir_fig)
 
-rcParams['figure.figsize'] = [5, 3]
 rcParams['axes.linewidth'] = 0.5
 rcParams['axes.edgecolor'] = 'gray'
 rcParams['axes.facecolor'] = 'None'
@@ -19,7 +21,6 @@ rcParams['font.family'] = 'sans serif'
 rcParams['font.stretch'] = 'condensed'
 rcParams['font.size'] = 13
 rcParams['text.usetex'] = False
-rcParams['text.latex.preamble'] = r'\usepackage{amsmath}'
 
 
 def initial_plot(phi_deg, ax, col1, col2, extension='pdf'):
