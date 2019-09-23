@@ -93,7 +93,7 @@ f = np.logspace(np.log10(fmin), np.log10(fmax), num=numf, endpoint=True)
 phimin, phimax, dphi = -180, 180, 45  # in degree
 phase_angles_deg = np.arange(phimin, phimax + dphi, dphi)
 phase_angles_rad = np.deg2rad(phase_angles_deg)
-annotations = {0: 'original', -90: 'Hilber transform',
+annotations = {0: 'original', -90: 'Hilbert transform',
                180: 'reverse polarity', -180: 'reverse polarity'}
 
 # Square Wave
