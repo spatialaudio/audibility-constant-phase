@@ -330,59 +330,49 @@ H(\Omega) &=
 %
 %
 %
+\section{Example: Transient Signal}
 \begin{frame}{Example: Constant Phase Shifts of Transient Signal}
 \only<1>
 {
+Original signal $x[n]$
 \begin{figure}
 \includegraphics[width=\textwidth]{graphics/original}
 \end{figure}
 }
 \only<2>
 {
+Original signal $x[n]$ and treatment Hilbert transform $x_\Hilbert[n]$
 \begin{figure}
 \includegraphics[width=\textwidth]{graphics/original-hilbert}
 \end{figure}
 }
 \only<3>
 {
+Original $x[n]$, treatment Hilbert transform $x_\Hilbert[n]$ and envelope
+$\pm\sqrt{x[n]^2+x_\Hilbert[n]^2}$
 \begin{figure}
 \includegraphics[width=\textwidth]{graphics/original-hilbert-envelope}
 \end{figure}
 }
 \only<4>
 {
+signals $x[n]\ast h[n]$ for different constant phase shifts $\varphi$
 \begin{figure}
 \includegraphics[width=\textwidth]{graphics/envelope-phaseshifts}
 \end{figure}
 }
 \only<5>
 {
+Audibility of the treatment Hilbert transform ($\varphi=-90\degree$) against original ?!
 \begin{figure}
 \includegraphics[width=\textwidth]{graphics/original-hilbert-envelope-phaseshifts}
 \end{figure}
 }
 \end{frame}
-
-%
-%
-%
-
-%
-%
-%
-
-%
-%
-%
-
-%
-%
-%
 %
 %
 %
 \section{Listening Experiment}
-
 \begin{frame}{Listening Experiment: ABX Test with webMUSHRA}
 \begin{tikzpicture}[remember picture,overlay]
 \node at (current page.center) {\includegraphics[width=\textwidth]{graphics/abx_gui}};
@@ -411,8 +401,8 @@ H(\Omega) &=
 %
 \textbf{4x Audio}
 \begin{itemize}
-\item square wave bursts 50 Hz, 200 ms on, 300ms off, $\sin^2$ fades
-\item 300Hz-lowpass filtered pink noise
+\item square wave bursts 50 Hz, 200 ms on, 300ms off, sin$^\text{2}$ fades
+\item 300 Hz-lowpass filtered pink noise
 \item castanets (anechoic by Matthias Frank)
 \item music excerpt with percussion, drums (Eagles, Hotel California, Hell freezes over, 1994)
 \end{itemize}
@@ -435,13 +425,13 @@ H(\Omega) &=
 \textbf{Sloppy} formulation of our research question:
 
 Is the number of correct answers (either A=X or B=X was correctly discriminated)
-higher than pure guessing would indicate?
+high enough that we can exclude pure guessing?
 \vspace{0.25cm}
 
 \textbf{PreHoc}:
 \begin{itemize}
 \item
-null hypothesis $\Hnull(p_\text{detect}=0.5)$
+null hypothesis $\Hnull(p_\text{detect}=0.5)$, i.e. pure guessing is involved
 \item
 subjects are to rate 5 treatments $\rightarrow$ Bonferroni correction for individual $\alpha_\text{I...V}, \beta_\text{I...V}$
 \item
@@ -464,34 +454,39 @@ can be rejected
 
 pairwise comparisons w.r.t. detection frequencies for small/medium effect size
 with $\chi^2$-distribution/-test
-
 \end{frame}
 %
 %
 %
-\begin{frame}{Listening Experiment Conditions}
+\begin{frame}{Listening Experiment Procedure}
 \begin{itemize}
-\item participants: 4 female, 8 male
-\item ratings: 12 participants x 5 treatments x 25 trials per treatment
-\item fully randomized stimuli sequence
-\item loudspeaker lab, 40 dB(A) noise floor, mean RT 0.3s
-\item diotic playback via \textcolor{colzerotalk}{headphone} Sennheiser HD800
-\item all stimuli loudness matched according to ITU-R BS.1770-4, except castanets
-\item $72.7~\text{dB(A)}_\text{Leq}$ / $87.7~\text{dB(C)}_\text{Peak}$
+\item in loudspeaker lab, 40 $\text{dB(A)}_\text{Leq}$ noise floor, mean RT 0.3 s
+\item diotic playback via \textcolor{colnonzero}{headphone} Sennheiser HD 800 (dynamic, open)
+\item except castanets, all stimuli loudness matched according to ITU-R BS.1770-4
+\item playback at 72.7 $\text{dB(A)}_\text{Leq}$ / 87.7 $\text{dB(C)}_\text{Peak}$
 for fullband pink noise
 \end{itemize}
 \begin{figure}
-\includegraphics[width=0.25\textwidth]{graphics/HD800}
-\includegraphics[width=0.6\textwidth]{graphics/URO_array_panorama}
+\includegraphics[width=0.65\textwidth]{graphics/URO_array_panorama_2}
+\includegraphics[width=0.215\textwidth]{graphics/HD800_2}
 \end{figure}
+\begin{itemize}
+\item participants: 4 female, 8 male
+\begin{tiny}
+age $a$: $\hat{\mu}_a=29.8$, $\hat{\sigma}_a=6.5$ years,
 
+percentiles $a_{0.05}=22.6,~a_{0.25}=25,~a_{0.5}=28,~a_{0.75}=32,~a_{0.95}=40.5$ years
+\end{tiny}
+\item ratings: 12 participants x 5 treatments x 25 trials per treatment
+\item fully randomized stimuli sequence
+\end{itemize}
 \end{frame}
 %
 %
 %
 \begin{frame}{Listening Experiment Results}
 \begin{figure}
-\includegraphics[width=0.75\textwidth]{graphics/scatter}
+\includegraphics[width=0.75\textwidth]{graphics/scatter-with-chitest}
 \end{figure}
 \end{frame}
 %
@@ -506,11 +501,14 @@ audibility depends on audio material and amount of constant phase shift
 \begin{columns}[c]
 \column{0.45\textwidth}
 \begin{figure}
-\includegraphics[width=1\textwidth]{graphics/spectra_filterorder510}
-\includegraphics[width=1\textwidth]{graphics/scatter}
+%\includegraphics[width=1\textwidth]{graphics/spectra_filterorder510}
+\includegraphics[width=0.8\textwidth]{graphics/original-hilbert}
+\includegraphics[width=0.9\textwidth]{graphics/scatter}
 \end{figure}
 \column{0.5\textwidth}
 \only<1>{
+
+detection of phase shift against original:
 \begin{itemize}
 \item very sensitive to square wave bursts
 \item likely sensitive for transient signals and lowpass filtered noise
@@ -529,11 +527,11 @@ trained experts achieve
 
 \textcolor{colnonzero}{pink noise} $\mathcolor{colnonzero}{\varphi=-90\degree}$:
 
-95\% correct answers $(p<2.1 \cdot 10^{-10})$
+95\% correct answers (***)
 
 \textcolor{colnonzero}{castanets} $\mathcolor{colnonzero}{\varphi=-90\degree}$:
 
-92\% correct answers $(p<2.9\cdot10^{-9})$
+92\% correct answers (***)
 \vspace*{0.5cm}
 
 \tiny ABX test design with assumed effect size $g =	0.25$,
@@ -551,7 +549,7 @@ $\alpha = 0.05$, power $1-\beta=0.95 \rightarrow
     Sascha Spors
 }
 \institute{University of Rostock}
-\date{Open Science: https://doi.org/10.5281/zenodo.\textcolor{colzerotalk}{3383286}}
+\date{This project fully supports open science: https://doi.org/10.5281/zenodo.\textcolor{colnonzero}{3383286}}
 \maketitle
 %
 %
