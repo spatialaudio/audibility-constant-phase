@@ -54,8 +54,8 @@ for vp in range(num_vp):
 p = calc_p(x_correct, x_total)
 h = x_correct / x_total * 100  # detection frequency correct answers
 
-voffset_count = -2
-hoffset_count = 0.005
+voffset_count = -0.3
+hoffset_count = 0.004
 fill_color = cm.get_cmap('viridis')(0.60)
 marker_size_min = 45
 marker_size_exp = 1.75
@@ -72,9 +72,9 @@ second_yaxis = True
 yticks = np.arange(0, 125, 25)
 
 
-fig, ax = plt.subplots(figsize=(8, 5))
+fig, ax = plt.subplots(figsize=(8, 6.5))
 
-ax.fill_between([-1, len(audio)], [p_H0, p_H0], [pmax, pmax],
+ax.fill_between([-1, len(audio)], [p_H0, p_H0], [pmax + 50, pmax + 50],
                 color=fill_color, lw=0, alpha=0.15)
 ax.text(4.35, 78, '$\mathcal{H}_0$ rejection region \n ($p \geq 19/25 = 76%$)',
         fontsize=12, ha='right', va='bottom')
@@ -87,7 +87,7 @@ for i, a in enumerate(audio):
     idx_multiple = counts > 1
     for cnt, prb in zip(counts[idx_multiple], elements[idx_multiple]):
         ax.text(i + hoffset_count, prb + voffset_count, cnt, color='w',
-                ha='center', va='bottom', fontsize=11, zorder=3)
+                ha='center', va='center', fontsize=11, zorder=3)
 if second_yaxis:
     ax2 = ax.twinx()
     ax2.set_yticks(np.arange(0, 30, 5))
@@ -103,3 +103,30 @@ ax.yaxis.grid(color='lightgray', alpha=0.5)
 ax.set_xlabel('Stimulus (phase shift)')
 ax.set_ylabel(r'Detection Rate / %')
 plt.savefig(dir_fig + 'scatter.pdf', bbox_inches='tight')
+
+# Chi-square test
+fig.set_size_inches(8, 7.2)
+y1_chitest = 104  # square wave 90 vs pink noise, castanets, hotel california
+y2_chitest = 110  # square wave 45 vs pink noise, castanets, hotel california
+y3_chitest = 55  # square wave 90 vs 45
+y1 = np.array([y1_chitest, y1_chitest])
+y2 = np.array([y2_chitest, y2_chitest])
+y3 = np.array([y3_chitest, y3_chitest])
+dy = 1.5
+col_chitest = fill_color
+
+ax.set_ylim(pmin, pmax + 12)
+ax.plot([0, 2], y1 + 2 * dy, color=col_chitest, marker='|')
+ax.plot([0, 3], y1 + dy, color=col_chitest, marker='|')
+ax.plot([0, 4], y1, color=col_chitest, marker='|')
+ax.text(0, y1_chitest + 2 * dy, '***', ha='left', color=col_chitest)
+
+ax.plot([1, 2], y2 + 2 * dy, color=col_chitest, marker='|')
+ax.plot([1, 3], y2 + dy, color=col_chitest, marker='|')
+ax.plot([1, 4], y2, color=col_chitest, marker='|')
+ax.text(1, y2_chitest + 2 * dy, '***', ha='left', color=col_chitest)
+
+ax.plot([0, 1], y3, color=col_chitest, marker='|')
+ax.text(0.5, y3_chitest, 'ns', ha='center', va='bottom', color=col_chitest)
+
+plt.savefig(dir_fig + 'scatter-with-chitest.pdf', bbox_inches='tight')
