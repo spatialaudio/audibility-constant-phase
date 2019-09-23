@@ -50,7 +50,7 @@ def decorate(ax):
     ax[1].set_ylabel(r'Phase / $\degree$')
     for axi in ax:
         axi.set_xlim(fmin, fmax)
-        axi.set_xlabel(r'$\log f$')
+        axi.set_xlabel(r'$\lg$ $f$')
         axi.set_xticklabels('')
         axi.grid(True)
 
