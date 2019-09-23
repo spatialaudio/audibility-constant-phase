@@ -23,29 +23,27 @@ rcParams['font.size'] = 13
 rcParams['text.usetex'] = False
 
 
-def initial_plot(phi_deg, ax, col1, col2, extension='pdf'):
+def plot_dirac_and_hilbert(ax, phi_deg, col1, col2):
     phi = np.deg2rad(phi_deg)
     h = util.discrete_ir_constant_phase(n, phi)
-    h[n == 0] = None
     # 0-degree component
-    l1 = ax.stem([0], [np.cos(phi)], markerfmt=col1 + 'o',
-                 linefmt=col1, basefmt=col1)
+    l1 = ax.stem([0], [1], label=r'$\delta[n]$',
+                 markerfmt=col1 + 'o', linefmt=col1, basefmt=col1)
     # 90-degree component (Hilbert)
-    l2 = ax.stem(n, h, markerfmt=col2 + 'o', linefmt=col2, basefmt=col2)
+    l2 = ax.stem(n, h, label='$h_{H}[n]$',
+                 markerfmt=col2 + 'o', linefmt=col2, basefmt=col2)
     decorate(ax)
-    # save figure
+    ax.legend()
+    ax.set_ylabel('$h[n]$', color='none')
     filename = 'discrete-ir'
-    plt.savefig(dir_fig + filename + '.' + extension, bbox_inches='tight')
-    return l1, l2
+    plt.savefig(dir_fig + filename + '.' + ext, bbox_inches='tight')
 
 
-def update_plot_and_save(phase_angles_deg, ax, l1, l2, col1, col2, extension):
+def plot_selected_phase_angles(ax, phase_angles_deg, col1, col2, ext):
     for phi_deg in phase_angles_deg:
         phi = np.deg2rad(phi_deg)
         h = util.discrete_ir_constant_phase(n, phi)
         h[n == 0] = None
-        l1.remove()  # remove old ir
-        l2.remove()
         # 0-degree component
         l1 = ax.stem([0], [np.cos(phi)], markerfmt=col1 + 'o',
                      linefmt=col1, basefmt=col1)
@@ -55,9 +53,12 @@ def update_plot_and_save(phase_angles_deg, ax, l1, l2, col1, col2, extension):
                       fontsize=30, color='lightgray', zorder=0,
                       va='bottom', ha='left')
         decorate(ax)
+        ax.set_ylabel('$h[n]$')
         # save figure
         filename = 'discrete-ir-phi{}'.format(phi_deg)
-        plt.savefig(dir_fig + filename + '.' + extension, bbox_inches='tight')
+        plt.savefig(dir_fig + filename + '.' + ext, bbox_inches='tight')
+        l1.remove()  # remove old ir
+        l2.remove()
         txt.remove()  # remove old annotation
 
 
@@ -74,9 +75,9 @@ nmin, nmax = -16, 16
 n = np.arange(nmin, nmax + 1)
 
 # Initial plot
-phi = -45
+phi = -90
 
-# Speical cases
+# Selected phase angles
 phase_angles_deg = [45, -45, 90, -90, 180, -180]
 
 # colors
@@ -84,8 +85,11 @@ col_zero = 'C3'
 col_nonzero = 'C0'
 col_ani = 'k'
 
-# Plot
+# Plots
 ext = 'pdf'
+
 fig, ax = plt.subplots(figsize=(5, 3))
-l1, l2 = initial_plot(phi, ax, col_zero, col_nonzero, ext)
-update_plot_and_save(phase_angles_deg, ax, l1, l2, col_ani, col_ani, ext)
+plot_dirac_and_hilbert(ax, phi, col_zero, col_nonzero)
+
+fig, ax = plt.subplots(figsize=(5, 3))
+plot_selected_phase_angles(ax, phase_angles_deg, col_ani, col_ani, ext)
