@@ -179,8 +179,8 @@ half-derivative slope for finite length array, linear phase
 %
 %
 %
-\begin{frame}{Literature}
-\textbf{Audio Engineering Context}:
+\begin{frame}{Literature On Audibility of Phase / Group Delay Distortion}
+in \textbf{Audio Engineering Context}:
 \small
 
 [13] V. Hansen E. R. Madsen (1974): "On aural phase detection" \textit{JAES}
@@ -331,7 +331,7 @@ H(\Omega) &=
 %
 %
 \section{Example: Transient Signal}
-\begin{frame}{Example: Constant Phase Shifts of Transient Signal}
+\begin{frame}{Example: Constant Phase Shift for Transient Signal}
 \only<1>
 {
 Original signal $x[n]$
@@ -356,7 +356,7 @@ $\pm\sqrt{x[n]^2+x_\Hilbert[n]^2}$
 }
 \only<4>
 {
-signals $x[n]\ast h[n]$ for different constant phase shifts $\varphi$
+Treatment $x[n]\ast h[n]$ for different constant phase shifts $\varphi$
 \begin{figure}
 \includegraphics[width=\textwidth]{graphics/envelope-phaseshifts}
 \end{figure}
@@ -428,7 +428,7 @@ Is the number of correct answers (either A=X or B=X was correctly discriminated)
 high enough that we can exclude pure guessing?
 \vspace{0.25cm}
 
-\textbf{PreHoc}:
+\textbf{PreHoc} test for individual participants:
 \begin{itemize}
 \item
 null hypothesis $\Hnull(p_\text{detect}=0.5)$, i.e. pure guessing is involved
@@ -450,9 +450,9 @@ can be rejected
 %
 \vspace{0.25cm}
 
-\textbf{PostHoc}:
+\textbf{PostHoc} for tested population:
 
-pairwise comparisons w.r.t. detection frequencies for small/medium effect size
+pairwise comparisons w.r.t. cumulated detection frequencies for small/medium effect size
 with $\chi^2$-distribution/-test
 \end{frame}
 %
