@@ -33,21 +33,24 @@ def plot_frequency_response(f, H, ax, **kw):
     plot_phase(ax[1], f, H, **kw)
     decorate(ax)
 
+
 def plot_magnitude(ax, f, H, **kw):
     ax.semilogx(f, db(H), **kw)
-    
+
+
 def plot_phase(ax, f, H, **kw):
     ax.semilogx(f, np.rad2deg(np.angle(H)), **kw)
+
 
 def decorate(ax):
     ax[0].set_ylim(-33, 33)
     ax[0].set_ylabel('Magnitude / dB')
     ax[1].set_ylim(-100, 100)
     ax[1].set_yticks(np.arange(-90, 90 + 45, 45))
-    ax[1].set_ylabel('Phase / $\degree$')
+    ax[1].set_ylabel(r'Phase / $\degree$')
     for axi in ax:
         axi.set_xlim(fmin, fmax)
-        axi.set_xlabel('$\log f$')
+        axi.set_xlabel(r'$\log f$')
         axi.set_xticklabels('')
         axi.grid(True)
 
@@ -60,6 +63,7 @@ def annotate_magnitude(ax, f, H, f0, string, **kw):
     dx, dy = p1 - p0
     angle = np.rad2deg(np.arctan2(dy, dx))
     ax.text(f0, db(H0), string, rotation=angle, rotation_mode='anchor', **kw)
+
 
 def annotate_phase(ax, f, H, f0, string, **kw):
     H0 = H[np.argmin(np.abs(f - f0))]
@@ -90,17 +94,19 @@ fl = 100
 fh = 3000
 Hl = H_line[np.argmin(np.abs(f - fl))]
 Hh = H_line[np.argmin(np.abs(f - fh))]
-magnitude = np.clip(np.abs(H_line), np.abs(Hl), np.abs(Hh)).astype('complex128')
-phase = np.stack([np.angle(H_line)[0] if (fi > fl) and (fi < fh) else 0 for fi in f])
+magnitude = np.clip(np.abs(H_line), np.abs(Hl), np.abs(Hh)).astype('complex')
+phase = np.stack([np.angle(H_line)[0] if (fi > fl) and (fi < fh) else 0
+                  for fi in f])
 H_minph = magnitude * np.exp(1j * phase)
 
 # Linear-phase design
 H_linph = magnitude
 
+# Plots
 col_source = 'Gray'
 col_eq = 'C0'
 lw = 3
-ext = 'png'
+ext = 'pdf'
 
 # Ideal plane source
 fig, ax = plt.subplots(ncols=2, gridspec_kw={'wspace': 0.4})
