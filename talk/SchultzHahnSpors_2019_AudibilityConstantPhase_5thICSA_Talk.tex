@@ -173,83 +173,35 @@ half-derivative slope for finite length array, linear phase
 %
 \begin{frame}{Ideal Constant Phase Shift}
 \begin{figure}
-\includegraphics[width=0.8\textwidth]{graphics/ideal-spectra-and-square-waves}
+\includegraphics[width=1\textwidth]{graphics/ideal-spectra-and-square-waves}
 \end{figure}
+%
+Literature audibility of group delay / phase distortions:
+
+\begin{itemize}
+\setlength\itemsep{-0.1em}
+\scriptsize
+\item V. Hansen et al. (1974):
+"On aural \textcolor{colnonzero}{phase} detection: Part I,II." \textit{JAES} \textbf{22}(1,10)
+\item J. Blauert  et al. (1978): "\textcolor{colnonzero}{Group delay distortions}
+in electroacoustical systems."
+\textit{JASA} \textbf{63}(5)
+\item H. Suzuki et al. (1980): "On the perception of
+\textcolor{colnonzero}{phase distortions}."
+\textit{JAES} \textbf{28}(9)
+\item S. Lipshitz et al. (1982): "On the audibility of
+\textcolor{colnonzero}{midrange phase distortion} in audio systems."
+\textit{JAES} \textbf{30}(9)
+\item H. Møller et al. (2007):
+"On the audibility of \textcolor{colnonzero}{all-pass phase}
+in electroacoustical transfer functions."
+\textit{JAES} \textbf{55}(3)
+\item H. Fastl, E. Zwicker (2007): "\textit{Psychoacoustics}", Springer, Berlin
+\end{itemize}
 \end{frame}
 %
 %
 %
-\begin{frame}{Literature On Audibility of Phase / Group Delay Distortion}
-in \textbf{Audio Engineering Context}:
-\small
-
-[13] V. Hansen E. R. Madsen (1974): "On aural phase detection" \textit{JAES}
-22(1)%:10–14
-
-[14] --- (1974): "On aural phase detection: Part II" \textit{JAES}
-22(10)%:783–788
-
-[15] J. Blauert, P. Laws (1978): "Group delay distortions in electroacoustical
-systems" \textit{JASA} 63(5)%:1478–1483
-
-[16] H. Suzuki, S. Morita, T. Shindo (1980): "On the perception of phase
-distortions" \textit{JAES} 28(9)%:570–574, September
-
-[17] S. P. Lipshitz, M. Pocock, J. Vanderkooy (1982): "On the audibility of
-midrange phase distortion in audio systems" \textit{JAES} 30(9)
-%:580–595, September 1982.
-
-[18] H. Møller, P. Minnaar, S. K. Olesen, F. Christensen, J. Plogsties (2007): "On
-the audibility of all-pass phase in electroacoustical transfer functions"
-\textit{JAES} 55(3)%:115–134, March 2007.
-\end{frame}
-%
-%
-%
-% \begin{frame}{Spectrum of Fractional Hilbert Transform}
-% Transfer function in DTFT domain for arbitrary constant phase shift $\varphi$ is
-% \begin{align*}
-% H(e^{i\Omega}) &=
-% \begin{cases}
-% e^{+i\varphi}, & 0 < \Omega < \pi\\
-% e^{-i\varphi}, & -\pi < \Omega < 0\\
-% \cos\varphi, & \Omega = 0, \pi
-% \end{cases}
-% \end{align*}
-% and can be rewritten as
-% \begin{align*}
-% H(e^{i\Omega})
-% = \cos\varphi
-% - \sin\varphi\cdot
-% \underbrace{-i\cdot\text{sgn}(\Omega)}_{\text{Hilbert transform}}
-% \end{align*}
-% \begin{figure}
-% \includegraphics[width=0.75\textwidth]{../paper/graphics/spectra_filterorder510}
-% \end{figure}
-% \end{frame}
-%
-%
-%
-% \begin{frame}{Impulse Response of Fractional Hilbert Transform}
-% Discrete-time impulse response for arbitrary constant phase shift $\varphi$ is
-% \begin{align*}
-% h[n] = \cos\varphi\cdot\delta[n]
-% - \sin\varphi \cdot
-% \underbrace{
-% \begin{cases}
-% 0,& \text{$n$ even}\\
-% \tfrac{2}{n\pi},& \text{$n$ odd}.
-% \end{cases}
-% }_{\text{Hilbert transform}}
-% \end{align*}
-% \begin{figure}
-% \includegraphics[width=0.5\textwidth]{../paper/graphics/discrete-ir-phi-45}
-% \end{figure}
-% \end{frame}
-%
-%
-%
-
 \section{DSP}
 \begin{frame}{Fractional Hilbert Transform / Constant Phase Shift $\varphi$}
 \begin{columns}[T]
@@ -313,19 +265,25 @@ H(\Omega) &=
 }
 %
 \begin{figure}
-\vspace*{+0.5cm}
-\hspace*{-1.9cm}
-\includegraphics[width=1.5\textwidth]{graphics/spectra_filterorder510}
+%\vspace*{+0.5cm}
+%\hspace*{-1.9cm}
+\includegraphics[width=1\textwidth]{graphics/ideal-phase-responses}
 \end{figure}
 \end{columns}
 \end{frame}
 %
 %
 %
-\begin{frame}{Fractional Hilbert Transform Spectrum}
+\begin{frame}{Finite Length Filter of Fractional Hilbert Transform}
 \begin{figure}
 \includegraphics[width=1\textwidth]{graphics/spectra_filterorder510}
 \end{figure}
+
+\begin{itemize}
+\item $\varphi=\pm 90\degree$ perfect phase, largest magnitude deviation
+\item $\varphi=\pm 180\degree$ perfect phase and magnitude, i.e. inverted Dirac impulse
+\item for all other $\varphi$ magnitude deviations and phase convergence to $\pm 180\degree$ at lowest/highest frequency
+\end{itemize}
 \end{frame}
 %
 %
@@ -395,9 +353,9 @@ Audibility of the treatment Hilbert transform ($\varphi=-90\degree$) against ori
 %
 %
 \begin{frame}{Audio Material Considerations}
-\begin{tikzpicture}[remember picture,overlay]
-\node at (9,-5) {\includegraphics[width=0.5\textwidth]{graphics/abx_gui}};
-\end{tikzpicture}
+%\begin{tikzpicture}[remember picture,overlay]
+%\node at (9,-5) {\includegraphics[width=0.5\textwidth]{graphics/abx_gui}};
+%\end{tikzpicture}
 %
 \textbf{4x Audio}
 \begin{itemize}
@@ -485,33 +443,36 @@ percentiles $a_{0.05}=22.6,~a_{0.25}=25,~a_{0.5}=28,~a_{0.75}=32,~a_{0.95}=40.5$
 %
 %
 \begin{frame}{Listening Experiment Results}
+\only<1>{
+ABX / Binomial
+\begin{figure}
+\includegraphics[width=0.75\textwidth]{graphics/scatter}
+\end{figure}
+}
+\only<2>{
+Contingency Tables / $\chi^2$
 \begin{figure}
 \includegraphics[width=0.75\textwidth]{graphics/scatter-with-chitest}
 \end{figure}
-\end{frame}
-%
-%
-%
-\begin{frame}{Listening Experiment Results}
-\begin{columns}[T]
-\column{0.45\textwidth}
+}
+\only<3>{
+Boxplot Decision Time
+\tiny
+measured as start to finish of trial, but not as pure playback time
 \begin{figure}
-\includegraphics[width=1\textwidth]{graphics/scatter-with-chitest}
+\includegraphics[width=0.75\textwidth]{graphics/boxplot_time}
 \end{figure}
-\column{0.45\textwidth}
-\begin{figure}
-\includegraphics[width=1\textwidth]{../abx_software/webMUSHRA_c929877_20180814/configs/boxplot_time}
-\end{figure}
-\end{columns}
+}
 \end{frame}
 %
 %
 %
 \section{Conclusion}
 \begin{frame}{Conclusion}
-constant phase shifter is known as fractional Hilbert transform
-
-audibility depends on audio material and amount of constant phase shift
+\begin{itemize}
+\item constant phase shifter is known as fractional Hilbert transform
+\item audibility depends on audio material and amount of constant phase shift
+\end{itemize}
 
 \begin{columns}[c]
 \column{0.45\textwidth}
@@ -564,7 +525,7 @@ $\alpha = 0.05$, power $1-\beta=0.95 \rightarrow
     Sascha Spors
 }
 \institute{University of Rostock}
-\date{This project fully supports open science: https://doi.org/10.5281/zenodo.\textcolor{colnonzero}{3383286}}
+\date{This project supports open science: https://doi.org/10.5281/zenodo.\textcolor{colnonzero}{3383286}}
 \maketitle
 %
 %
@@ -601,6 +562,14 @@ Impulse response for $\varphi=-\frac{\pi}{4}$
 \begin{frame}[noframenumbering]{Crest Factor}
 \begin{figure}
 \includegraphics[width=\textwidth]{graphics/crest-factor}
+\end{figure}
+\end{frame}
+%
+%
+%
+\begin{frame}[noframenumbering]{Audio Content Spectra}
+\begin{figure}
+\includegraphics[width=\textwidth]{graphics/stimuli-spectra}
 \end{figure}
 \end{frame}
 %
