@@ -73,7 +73,7 @@ def plot_square_waves(ax, fs, f0, duration, amplitude, num_partials,
         ax.plot(t, s + j * voffset, c=colors(j / num_phase))
         ax.text(0, j * voffset, '{:0.0f}$\degree$'.format(np.rad2deg(phi)),
                 ha='right', va='center', color=colors(j / num_phase))
-    ax.text(50, 45, 'Phase shifted sqaure waves', ha='center', va='center')
+    ax.text(50, 45, 'Phase shifted square waves', ha='center', va='center')
     ax.xaxis.set_ticks(np.arange(0, duration * 1000 + 20, 20))
     ax.yaxis.set_ticks([])
     ax.xaxis.grid()
