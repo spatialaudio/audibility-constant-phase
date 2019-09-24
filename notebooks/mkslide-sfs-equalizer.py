@@ -118,7 +118,7 @@ annotate_magnitude(ax[0], f, H_plane, 1000, 'EQ (+6 dB/oct)',
                    va='bottom', ha='center')
 annotate_phase(ax[1], f, S_plane, 1000, r'Planar Source (-90 $\degree$)',
                va='bottom', ha='center')
-annotate_phase(ax[1], f, H_plane, 1000, r'EQ (+90 $\degree$)',
+annotate_phase(ax[1], f, H_plane + 0.75, 1000, r'EQ (+90 $\degree$)',
                va='top', ha='center')
 plt.savefig(dir_fig + 'equalizer-ideal-plane-source.' + ext,
             bbox_inches='tight')

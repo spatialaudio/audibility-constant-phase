@@ -59,7 +59,7 @@ whiskerprops = dict(linewidth=2, color=col_wsk)
 capprops = dict(linewidth=2, color=col_cap)
 
 # Box plot
-fig, ax = plt.subplots(figsize=(8, 6))
+fig, ax = plt.subplots(figsize=(8, 6.5))
 ax.boxplot(t / 1000, whis=[5, 95], widths=0.5,
            medianprops=medianprops, boxprops=boxprops, flierprops=flierprops,
            whiskerprops=whiskerprops, capprops=capprops)
@@ -68,8 +68,8 @@ ax.set_yticks(np.arange(0, 160, 30))
 ax.set_xticklabels(a_label, fontsize=11.5)
 #ax.set_ylabel('Trial Decision Time  / s')
 #ax.set_title(r'median P$_{50}$, box P$_{25}$ & P$_{55}$, whisker P$_{5}$ & P$_{95}$')
-ax.set_ylabel('$t$ / s')
-ax.set_title('Duration per Trial')
+ax.set_xlabel('Stimulus (phase shift)')
+ax.set_ylabel('Trial Decision Time / s')
 ax.yaxis.grid(color='gray', alpha=0.5)
 
 # Legend
