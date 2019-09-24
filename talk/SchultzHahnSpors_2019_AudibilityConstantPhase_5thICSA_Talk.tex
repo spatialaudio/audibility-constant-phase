@@ -101,8 +101,8 @@
 }
 
 \date[2019-09-28]{%
-  \raisebox{0mm}{\includegraphics[width=4.5cm]{graphics/icsa-2019.png}}\\
-  5th ICSA, Ilmenau, ORAL-5-3\\
+  \raisebox{0mm}{\includegraphics[width=4.5cm]{graphics/icsa-2019.png}}
+  %5th ICSA, Ilmenau, ORAL-5-3\\
 }
 
 \institute[]{Institute of Communications Engineering, University of Rostock}
@@ -127,7 +127,7 @@
 \hspace{1cm}\includegraphics[width=0.5\textwidth]{graphics/lineararray}
 \column{0.67\textwidth}
 \only<1>{
-ideal half-derivative EQ for infinite linear array
+ideal \textcolor{colnonzero}{half-derivative} EQ for infinite linear array
 
 \includegraphics[width=1\textwidth]{graphics/equalizer-ideal-line-source}
 }
@@ -153,7 +153,7 @@ ideal half-derivative EQ for infinite linear array
 }
 \column{0.67\textwidth}
 \only<1>{
-ideal full-derivative EQ for infinite planar array
+ideal \textcolor{colnonzero}{full-derivative} EQ for infinite planar array
 
 \includegraphics[width=1\textwidth]{graphics/equalizer-ideal-plane-source}
 }
@@ -208,7 +208,7 @@ in electroacoustical transfer functions."
 \begin{columns}[T]
 %
 \column{0.45\textwidth}
-- Discrete-time \underline{infinite} impulse response
+Discrete-time \underline{infinite} impulse response
 \begin{align*}
 h[n] = \cos\varphi\cdot\mathcolor{colzerotalk}{\delta[n]}
 - \sin\varphi \cdot
@@ -220,17 +220,18 @@ h[n] = \cos\varphi\cdot\mathcolor{colzerotalk}{\delta[n]}
 }_{\text{Hilbert transform }\hh[n]}
 \end{align*}
 %
-- DTFT spectrum over $\Omega=2 \pi \frac{f}{f_s}$
+DTFT spectrum over $\Omega=2 \pi \frac{f}{f_s}$
 \vspace*{-0.3cm}
 \begin{align*}
 H(\Omega)
-= \cos\varphi \cdot \mathcolor{colzerotalk}{1}
+&= \cos\varphi \cdot \mathcolor{colzerotalk}{1}
 - \sin\varphi\cdot
-\underbrace{\mathcolor{colnonzero}{-\im\cdot\text{sgn}(\Omega)}}_{\text{Hilbert transform}\Hh(\Omega)}
-\end{align*}
-\vspace*{-0.3cm}
-\begin{align*}
-H(\Omega) &=
+\underbrace{(\mathcolor{colnonzero}{-\im\cdot\text{sgn}(\Omega)})}_{\text{Hilbert transform}}
+%\end{align*}
+%\vspace*{-0.3cm}
+%\begin{align*}
+\\
+&=
 \begin{cases}
 \e^{+\im\varphi}, & 0 < \Omega < \pi\\
 \e^{-\im\varphi}, & -\pi < \Omega < 0\\
@@ -282,8 +283,9 @@ H(\Omega) &=
 
 \begin{itemize}
 \item $\varphi=\pm 90\degree$ perfect phase, largest magnitude deviation
-\item $\varphi=\pm 180\degree$ perfect phase and magnitude, i.e. inverted Dirac impulse
-\item for all other $\varphi$ magnitude deviations and phase convergence to $\pm 180\degree$ at lowest/highest frequency
+\item $\varphi=\pm 180\degree$ perfect phase and perfect magnitude, i.e. inverted Dirac impulse
+\item for all other $\varphi$ at lowest / highest frequencies:\\
+magnitude deviations and phase convergence to $0\degree$ or $180\degree$
 \end{itemize}
 \end{frame}
 %
@@ -380,28 +382,29 @@ Audibility of the treatment Hilbert transform ($\varphi=-90\degree$) against ori
 %
 %
 %
-\begin{frame}{ABX Test Statistic Considerations}
-\textbf{Sloppy} formulation of our research question:
+\begin{frame}{ABX / $\chi^2$ Test Statistic Considerations}
+%\textbf{Sloppy} formulation of our research question:
 
-Is the number of correct answers (either A=X or B=X was correctly discriminated)
-high enough that we can exclude pure guessing?
-\vspace{0.25cm}
+%Is the number of correct answers (either A=X or B=X was correctly discriminated)
+%high enough that we can exclude pure guessing?
+%\vspace{0.25cm}
 
-\textbf{PreHoc} test for individual participants:
+\textbf{Pre hoc} for individual participants:
 \begin{itemize}
 \item
 null hypothesis $\Hnull(p_\text{detect}=0.5)$, i.e. pure guessing is involved
+%\item
+%subjects are to rate 5 treatments $\rightarrow$ Bonferroni correction for
+%individual $\alpha_\text{I...V}, \beta_\text{I...V}$
 \item
-subjects are to rate 5 treatments $\rightarrow$ Bonferroni correction for individual $\alpha_\text{I...V}, \beta_\text{I...V}$
-\item
-target rejection level $\alpha=0.05$
-\item
+target rejection level $\alpha=0.05$,
+%\item
 target test power $1-\beta = 0.95$
 
 \item
-assumed effect size $g=0.4$ due to estimated $p_\text{detect}=0.9$ in preliminary tests
+assumed $p_\text{detect}=0.9$ (effect size $g=0.4$)
 \item
-\textcolor{colnonzero}{per audio content}:
+\textcolor{colnonzero}{per audio content}
 for $\frac{\geq 19\,\text{correct trials}}{25\,\text{total trials}}
 \rightarrow p_\text{Binomial PDF}<\frac{\alpha}{5} \rightarrow\Hnull$
 can be rejected
@@ -409,20 +412,23 @@ can be rejected
 %
 \vspace{0.25cm}
 
-\textbf{PostHoc} for tested population:
+\textbf{Post hoc} for tested population (cumulated frequencies):
 
-pairwise comparisons w.r.t. cumulated detection frequencies for small/medium effect size
-with $\chi^2$-distribution/-test
+\begin{itemize}
+\item comparison against $p_\text{detect}=0.5$ per treatment
+\item pairwise comaprisons of all treatments
+\end{itemize}
+using $p_{\chi^2 \text{PDF}}$ for small/medium effect size
 \end{frame}
 %
 %
 %
 \begin{frame}{Listening Experiment Procedure}
 \begin{itemize}
-\item in loudspeaker lab, 40 $\text{dB(A)}_\text{Leq}$ noise floor, mean RT 0.3 s
+\item experiments conducted in our audio lab %, 40 $\text{dB(A)}_\text{Leq}$ noise floor, mean RT 0.3 s
 \item diotic playback via \textcolor{colnonzero}{headphone} Sennheiser HD 800 (dynamic, open)
-\item except castanets, all stimuli loudness matched according to ITU-R BS.1770-4
-\item playback at 72.7 $\text{dB(A)}_\text{Leq}$ / 87.7 $\text{dB(C)}_\text{Peak}$
+\item stimuli ITU-R BS.1770-4 loudness matched (except castanets)
+\item playback at 73 $\text{dB(A)}_\text{Leq}$ / 88 $\text{dB(C)}_\text{Peak}$
 for fullband pink noise
 \end{itemize}
 \begin{figure}
@@ -430,13 +436,9 @@ for fullband pink noise
 \includegraphics[width=0.215\textwidth]{graphics/HD800_2}
 \end{figure}
 \begin{itemize}
-\item participants: 4 female, 8 male
-\begin{tiny}
-age $a$: $\hat{\mu}_a=29.8$, $\hat{\sigma}_a=6.5$ years,
-
-percentiles $a_{0.05}=22.6,~a_{0.25}=25,~a_{0.5}=28,~a_{0.75}=32,~a_{0.95}=40.5$ years
-\end{tiny}
-\item ratings: 12 participants x 5 treatments x 25 trials per treatment
+%age $a$: $\hat{\mu}_a=29.8$, $\hat{\sigma}_a=6.5$ years,
+%percentiles $a_{0.05}=22.6,~a_{0.25}=25,~a_{0.5}=28,~a_{0.75}=32,~a_{0.95}=40.5$ years
+\item ratings: 5 treatments x 25 trials per treatment x 12 participants (4 female, 8 male)
 \item fully randomized stimuli sequence
 \end{itemize}
 \end{frame}
@@ -457,9 +459,9 @@ Contingency Tables / $\chi^2$
 \end{figure}
 }
 \only<3>{
-Boxplot Decision Time
+Decision Time
 \tiny
-measured as start to finish of trial, but not as pure playback time
+%measured as start to finish of trial, but not as pure playback time...thus many outliers
 \begin{figure}
 \includegraphics[width=0.75\textwidth]{graphics/boxplot_time}
 \end{figure}
@@ -470,22 +472,22 @@ measured as start to finish of trial, but not as pure playback time
 %
 \section{Conclusion}
 \begin{frame}{Conclusion}
-\begin{itemize}
-\item constant phase shifter is known as fractional Hilbert transform
-\item audibility depends on audio material and amount of constant phase shift
-\end{itemize}
+%\begin{itemize}
+%\item constant phase shifter is known as fractional Hilbert transform
+%\item audibility depends on audio material and amount of constant phase shift
+%\end{itemize}
 
 \begin{columns}[c]
-\column{0.45\textwidth}
+\column{0.4\textwidth}
 \begin{figure}
 %\includegraphics[width=1\textwidth]{graphics/spectra_filterorder510}
 \includegraphics[width=0.8\textwidth]{graphics/original-hilbert}
 \includegraphics[width=0.9\textwidth]{graphics/scatter}
 \end{figure}
-\column{0.5\textwidth}
+\column{0.55\textwidth}
 \only<1>{
 
-detection of phase shift against original:
+\textbf{Discrimination of phase shift against original}
 \begin{itemize}
 \item very sensitive to square wave bursts
 \item likely sensitive for transient signals and lowpass filtered noise
@@ -503,30 +505,35 @@ trained experts achieve
 %\textcolor{colnonzero}{castanets}: 28 correct $(p<0.022)$ and 39 correct $(p<2.9\cdot10^{-9})$
 
 \textcolor{colnonzero}{pink noise} $\mathcolor{colnonzero}{\varphi=-90\degree}$:
-
-95\% correct answers (***)
+95\% (***)
 
 \textcolor{colnonzero}{castanets} $\mathcolor{colnonzero}{\varphi=-90\degree}$:
+92\% (***)
+%\vspace*{0.5cm}
 
-92\% correct answers (***)
-\vspace*{0.5cm}
-
-\tiny ABX test design with assumed effect size $g =	0.25$,
+\begin{tiny}
+ABX test design with assumed effect size $g =	0.25$,
 $\alpha = 0.05$, power $1-\beta=0.95 \rightarrow
 \frac{\geq 27\,\text{correct trials}}{42\,\text{total trials}}$
+\end{tiny}
+
+\vspace{0.4cm}
+
+psychometric function \textcolor{colnonzero}{dectection over} $\mathcolor{colnonzero}{\varphi}$
+
 }
 \end{columns}
 \end{frame}
 %
 %
 %
-\author{%
+\author[Schultz, Hahn, Spors]{%
     Frank Schultz,
     Nara Hahn,
     Sascha Spors
 }
 \institute{University of Rostock}
-\date{This project supports open science: https://doi.org/10.5281/zenodo.\textcolor{colnonzero}{3383286}}
+\date[]{This project supports open science: https://doi.org/10.5281/zenodo.\textcolor{colnonzero}{3383286}}
 \maketitle
 %
 %
