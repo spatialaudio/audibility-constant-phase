@@ -47,7 +47,7 @@ def plot_phase(ax, fmin, fmax, phase_angles, colors, annotations):
     num_phase = len(phase_angles)
     flabel = np.sqrt(fmin * fmax)
     fontsize = 14
-    voffset = -5
+    voffset = 0
     for i, phi in enumerate(phase_angles):
         ax.hlines(phi, fmin, fmax, color=colors(i / num_phase))
         if phi in annotations:
@@ -71,15 +71,15 @@ def plot_square_waves(ax, fs, f0, duration, amplitude, num_partials,
                                    fs, phi, modal_window)
         t = 1000 * np.arange(len(s)) / fs
         ax.plot(t, s + j * voffset, c=colors(j / num_phase))
+        ax.text(0, j * voffset, '{:0.0f}$\degree$'.format(np.rad2deg(phi)),
+                ha='right', va='center', color=colors(j / num_phase))
+    ax.text(50, 45, 'Phase shifted sqaure waves', ha='center', va='center')
     ax.xaxis.set_ticks(np.arange(0, duration * 1000 + 20, 20))
-    ax.yaxis.set_ticks(voffset * np.arange(num_phase))
-    ax.yaxis.set_ticklabels(np.arange(-180, 180 + 45, 45))
+    ax.yaxis.set_ticks([])
     ax.xaxis.grid()
-    ax.set_xlim(-1, duration * 1000 + 1)
-    ax.set_ylim(-0.5 * voffset, (num_phase - 0.5) * voffset)
+    ax.set_xlim(-16, duration * 1000 + 1)
+    ax.set_ylim(-0.5 * voffset, (num_phase - 0.5) * voffset + voffset)
     ax.set_xlabel('$t$ / ms')
-    ax.set_ylabel(r'Phase shift / $^\circ$')
-    ax.set_title('Phase shifted square waves')
 
 
 # Ideal magnitude response
@@ -99,12 +99,12 @@ annotations = {0: 'original', -90: 'Hilbert transform',
 # Square Wave
 fs = 44100
 f0 = 50
-duration = 10 / f0
+duration = 5 / f0
 amplitude = 1
 num_partials = 50
 modal_window = kaiser(2 * num_partials + 1, beta=4)[num_partials + 1:]
 
-# Plots
+# Plots (2 by 2)
 colors = cm.get_cmap('viridis')  # line colors
 
 fig = plt.figure(figsize=(10, 8))
@@ -118,6 +118,14 @@ ax3 = fig.add_subplot(gs[1, :])
 plot_magnitude(ax1, fmin, fmax, H_mag, color='k')
 plot_phase(ax2, fmin, fmax, phase_angles_deg, colors, annotations)
 plot_square_waves(ax3, fs, f0, duration, amplitude, num_partials,
+                  modal_window, phase_angles_rad, colors)
+
+# Plots (1 by 3)
+fig, ax = plt.subplots(figsize=(15, 4), ncols=3, gridspec_kw={'wspace': 0.3})
+
+plot_magnitude(ax[0], fmin, fmax, H_mag, color='k')
+plot_phase(ax[1], fmin, fmax, phase_angles_deg, colors, annotations)
+plot_square_waves(ax[2], fs, f0, duration, amplitude, num_partials,
                   modal_window, phase_angles_rad, colors)
 
 filename = 'ideal-spectra-and-square-waves'
