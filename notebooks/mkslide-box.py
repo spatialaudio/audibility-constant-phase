@@ -58,16 +58,33 @@ flierprops = dict(marker='P', markerfacecolor=col_flr, markeredgecolor='none',
 whiskerprops = dict(linewidth=2, color=col_wsk)
 capprops = dict(linewidth=2, color=col_cap)
 
+# Scatter plot
+fig, ax = plt.subplots(figsize=(8, 6.5))
+for i, ti in enumerate(t.T):
+    ax.plot((i + 1) * np.ones_like(ti), ti / 1000, linestyle='none',
+            marker='P', markersize=8, markerfacecolor=col_flr,
+            markeredgecolor='none', alpha=0.33)
+ax.set_xlim(0.5, 5.7)
+ax.set_ylim(0, 155)
+ax.set_yticks(np.arange(0, 160, 30))
+ax.set_xticks(np.arange(1, 6))
+ax.set_xticklabels(a_label, fontsize=11.5)
+ax.set_xlabel('Stimulus (phase shift)')
+ax.set_ylabel('Trial Decision Time / s')
+ax.yaxis.grid(color='gray', alpha=0.5)
+
+plt.savefig(dir_fig + 'scatterplot_time.pdf')
+
+
 # Box plot
 fig, ax = plt.subplots(figsize=(8, 6.5))
 ax.boxplot(t / 1000, whis=[5, 95], widths=0.5,
            medianprops=medianprops, boxprops=boxprops, flierprops=flierprops,
            whiskerprops=whiskerprops, capprops=capprops)
+ax.set_xlim(0.5, 5.7)
 ax.set_ylim(0, 155)
 ax.set_yticks(np.arange(0, 160, 30))
 ax.set_xticklabels(a_label, fontsize=11.5)
-#ax.set_ylabel('Trial Decision Time  / s')
-#ax.set_title(r'median P$_{50}$, box P$_{25}$ & P$_{55}$, whisker P$_{5}$ & P$_{95}$')
 ax.set_xlabel('Stimulus (phase shift)')
 ax.set_ylabel('Trial Decision Time / s')
 ax.yaxis.grid(color='gray', alpha=0.5)
@@ -79,6 +96,5 @@ p_label = ['P$_{05}$', 'P$_{25}$', 'P$_{50}$', 'P$_{75}$', 'P$_{95}$']
 colors = [col_cap, col_box, col_med, col_box, col_cap]
 for tl, pl, col in zip(t_label, p_label, colors):
     ax.text(x_label, tl, pl, fontsize=15, color=col, va='center', ha='left')
-ax.set_xlim(0.5, 5.7)
 
 plt.savefig(dir_fig + 'boxplot_time.pdf')
