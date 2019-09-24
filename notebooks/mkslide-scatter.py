@@ -76,7 +76,8 @@ fig, ax = plt.subplots(figsize=(8, 6.5))
 
 ax.fill_between([-1, len(audio)], [p_H0, p_H0], [pmax + 50, pmax + 50],
                 color=fill_color, lw=0, alpha=0.15)
-ax.text(4.35, 78, '$\mathcal{H}_0$ rejection region \n ($p \geq 19/25 = 76%$)',
+ax.text(4.35, 78,
+        r'$\mathcal{H}_0$ rejection region' + '\n' + r'($p \geq 19/25 = 76%$)',
         fontsize=12, ha='right', va='bottom')
 for i, a in enumerate(audio):
     elements, counts = np.unique(h[:, i], return_counts=True)
@@ -104,7 +105,7 @@ ax.set_xlabel('Stimulus (phase shift)')
 ax.set_ylabel(r'Detection Rate / %')
 plt.savefig(dir_fig + 'scatter.pdf', bbox_inches='tight')
 
-# Chi-square test
+# Post hoc Chi-square test
 fig.set_size_inches(8, 7.2)
 y1_chitest = 104  # square wave 90 vs pink noise, castanets, hotel california
 y2_chitest = 110  # square wave 45 vs pink noise, castanets, hotel california
@@ -119,18 +120,21 @@ ax.set_ylim(pmin, pmax + 12)
 ax.plot([0, 2], y1 + 2 * dy, color=col_chitest, marker='|')
 ax.plot([0, 3], y1 + dy, color=col_chitest, marker='|')
 ax.plot([0, 4], y1, color=col_chitest, marker='|')
-ax.text(0, y1_chitest + 2 * dy, '***', ha='left', color=col_chitest)
+ax.text(0, y1_chitest + 2 * dy, r'$\ast$$\ast$$\ast$(post hoc)',
+        fontsize=12, ha='left', va='bottom', color=col_chitest)
 
 ax.plot([1, 2], y2 + 2 * dy, color=col_chitest, marker='|')
 ax.plot([1, 3], y2 + dy, color=col_chitest, marker='|')
 ax.plot([1, 4], y2, color=col_chitest, marker='|')
-ax.text(1, y2_chitest + 2 * dy, '***', ha='left', color=col_chitest)
+ax.text(1, y2_chitest + 2 * dy, r'$\ast$$\ast$$\ast$(post hoc)',
+        fontsize=12, ha='left', va='bottom', color=col_chitest)
 
 ax.plot([0, 1], y3, color=col_chitest, marker='|')
 ax.text(0.5, y3_chitest, 'ns', ha='center', va='bottom', color=col_chitest)
 
-ax.text(0, 30, '***: $p<0.001$', ha='left', va='bottom', color=col_chitest)
-ax.text(0, 26, 'ns: not significant', ha='left', va='bottom', color=col_chitest)
-
+ax.text(0, 30, r'$\ast$$\ast$$\ast$: $p<0.001$',
+        ha='left', va='bottom', color=col_chitest)
+ax.text(0, 26, 'ns: not significant',
+        ha='left', va='bottom', color=col_chitest)
 
 plt.savefig(dir_fig + 'scatter-with-chitest.pdf', bbox_inches='tight')
