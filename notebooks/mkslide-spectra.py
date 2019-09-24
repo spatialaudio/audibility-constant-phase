@@ -20,7 +20,7 @@ rcParams['axes.labelcolor'] = 'black'
 rcParams['xtick.color'] = 'gray'
 rcParams['ytick.color'] = 'gray'
 rcParams['font.family'] = 'sans serif'
-rcParams['font.serif'] = 'Times New Roman'
+rcParams['font.stretch'] = 'condensed'
 rcParams['font.size'] = 13
 rcParams['text.usetex'] = False
 rcParams['text.latex.preamble'] = r'\usepackage{amsmath}'
@@ -80,6 +80,7 @@ for i, fo in enumerate(Filter_orders):
                va='center', ha='left', fontsize=8, color='k')
     ax[1].text(4**(-i) * 30, 53, r'$N={:0.0f}$'.format(fo + 1), rotation=45,
                va='center', ha='left', fontsize=8, color='k')
+ax[0].text(1.27, -33, '$N$: filter length', va='center', ha='left')
 
 for i, phi in enumerate(phase_angles):
     n, h = util.constant_phase_shifter(filter_order, phi, beta=beta)
