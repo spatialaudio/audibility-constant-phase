@@ -131,3 +131,11 @@ plot_square_waves(ax[2], fs, f0, duration, amplitude, num_partials,
 filename = 'ideal-spectra-and-square-waves'
 extension = '.pdf'
 plt.savefig(dir_fig + filename + extension, bbox_inches='tight')
+
+# Ideal phase response (single plot)
+fig, ax = plt.subplots(figsize=(5, 3))
+plot_phase(ax, fmin, fmax, phase_angles_deg, colors, annotations)
+
+filename = 'ideal-phase-responses'
+extension = '.pdf'
+plt.savefig(dir_fig + filename + extension, bbox_inches='tight')
