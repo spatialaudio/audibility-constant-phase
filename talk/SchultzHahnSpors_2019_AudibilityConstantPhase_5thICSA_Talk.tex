@@ -119,6 +119,41 @@
 %
 %
 \section{Introduction}
+%
+\begin{frame}[label=introslide]{Ideal Constant Phase Shift}
+Audibility of constant phase shift?
+\begin{figure}
+\includegraphics[width=1\textwidth]{graphics/ideal-spectra-and-square-waves}
+\end{figure}
+%
+Literature audibility of group delay / phase distortions:
+
+\begin{itemize}
+\setlength\itemsep{-0.1em}
+\scriptsize
+\item V. Hansen et al. (1974):
+"On aural \textcolor{colnonzero}{phase} detection: Part I,II." \textit{JAES} \textbf{22}(1,10)
+\item J. Blauert  et al. (1978): "\textcolor{colnonzero}{Group delay distortions}
+in electroacoustical systems."
+\textit{JASA} \textbf{63}(5)
+\item H. Suzuki et al. (1980): "On the perception of
+\textcolor{colnonzero}{phase distortions}."
+\textit{JAES} \textbf{28}(9)
+\item S. Lipshitz et al. (1982): "On the audibility of
+\textcolor{colnonzero}{midrange phase distortion} in audio systems."
+\textit{JAES} \textbf{30}(9)
+\item H. Møller et al. (2007):
+"On the audibility of \textcolor{colnonzero}{all-pass phase}
+in electroacoustical transfer functions."
+\textit{JAES} \textbf{55}(3)
+\item M. Laitinen (2013): "Sensitivity of Human Hearing to Changes in
+\textcolor{colnonzero}{Phase} Spectrum." \textit{JAES} \textbf{61}(11)
+\item H. Fastl, E. Zwicker (2007): "\textit{Psychoacoustics}", Springer, Berlin
+\end{itemize}
+\end{frame}
+%
+%
+%
 \begin{frame}{Sound Field Synthesis (SFS) with Linear / Planar Arrays}
 \begin{columns}[T]
 \column{0.33\textwidth}
@@ -172,40 +207,11 @@ half-derivative slope for finite length array, linear phase
 %
 %
 %
-\begin{frame}{Ideal Constant Phase Shift}
-\begin{figure}
-\includegraphics[width=1\textwidth]{graphics/ideal-spectra-and-square-waves}
-\end{figure}
-%
-Literature audibility of group delay / phase distortions:
-
-\begin{itemize}
-\setlength\itemsep{-0.1em}
-\scriptsize
-\item V. Hansen et al. (1974):
-"On aural \textcolor{colnonzero}{phase} detection: Part I,II." \textit{JAES} \textbf{22}(1,10)
-\item J. Blauert  et al. (1978): "\textcolor{colnonzero}{Group delay distortions}
-in electroacoustical systems."
-\textit{JASA} \textbf{63}(5)
-\item H. Suzuki et al. (1980): "On the perception of
-\textcolor{colnonzero}{phase distortions}."
-\textit{JAES} \textbf{28}(9)
-\item S. Lipshitz et al. (1982): "On the audibility of
-\textcolor{colnonzero}{midrange phase distortion} in audio systems."
-\textit{JAES} \textbf{30}(9)
-\item H. Møller et al. (2007):
-"On the audibility of \textcolor{colnonzero}{all-pass phase}
-in electroacoustical transfer functions."
-\textit{JAES} \textbf{55}(3)
-\item M. Laitinen (2013): "Sensitivity of Human Hearing to Changes in
-\textcolor{colnonzero}{Phase} Spectrum." \textit{JAES} \textbf{61}(11)
-\item H. Fastl, E. Zwicker (2007): "\textit{Psychoacoustics}", Springer, Berlin
-\end{itemize}
-\end{frame}
+\againframe{introslide}
 %
 %
 %
-\section{DSP}
+\section{Signal Processing Theory}
 \begin{frame}{Fractional Hilbert Transform / Constant Phase Shift $\varphi$}
 \begin{columns}[T]
 %
@@ -287,7 +293,7 @@ H(\Omega)
 \item for $\varphi=\pm 180\degree$: perfect phase and perfect magnitude, i.e. inverted Dirac impulse
 \item for $\varphi=\pm 90\degree$: perfect phase, largest magnitude deviation
 \item for all other $\varphi$ at lowest / highest frequencies:\\
-magnitude deviations and phase convergence to $0\degree$ or $180\degree$
+magnitude convergence to $\cos\varphi$ and phase convergence to $0\degree$ or $180\degree$
 \end{itemize}
 \end{frame}
 %
@@ -408,7 +414,7 @@ target test power $1-\beta = 0.95$
 \item
 assumed $p_\text{detect}=0.9$ (effect size $g=0.4$)
 \item
-\textcolor{colnonzero}{per audio content}
+per \textcolor{colnonzero}{audio content}
 for $\frac{\geq 19\,\text{correct trials}}{25\,\text{total trials}}
 \rightarrow p_\text{Binomial PDF}<\frac{\alpha}{5} \rightarrow\Hnull$
 can be rejected
@@ -419,8 +425,8 @@ can be rejected
 \textbf{Post hoc} for tested population (cumulated frequencies):
 
 \begin{itemize}
-\item comparison against $p_\text{detect}=0.5$ per treatment
-\item pairwise comparisons of all treatments
+\item per \textcolor{colnonzero}{audio content}: comparison against 50:50 answering
+\item 10 pairwise comparisons over all \textcolor{colnonzero}{audio contents}: same rating for different content?
 \end{itemize}
 using $p_{\chi^2 \text{PDF}}$ for small / medium effect size
 \end{frame}
@@ -476,7 +482,7 @@ Trial Decision Time
 %
 \section{Conclusion}
 \begin{frame}{Conclusion}
-Audibility of constant phase shift
+Audibility constant phase shift$\rightarrow$ yes
 %\begin{itemize}
 %\item constant phase shifter is known as fractional Hilbert transform
 %\item audibility depends on audio material and amount of constant phase shift
