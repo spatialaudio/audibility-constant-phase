@@ -110,9 +110,11 @@ fig.set_size_inches(8, 7.2)
 y1_chitest = 104  # square wave 90 vs pink noise, castanets, hotel california
 y2_chitest = 110  # square wave 45 vs pink noise, castanets, hotel california
 y3_chitest = 55  # square wave 90 vs 45
+y4_chitest = 29
 y1 = np.array([y1_chitest, y1_chitest])
 y2 = np.array([y2_chitest, y2_chitest])
 y3 = np.array([y3_chitest, y3_chitest])
+y4 = np.array([y4_chitest, y4_chitest])
 dy = 1.5
 col_chitest = fill_color
 
@@ -129,8 +131,14 @@ ax.plot([1, 4], y2, color=col_chitest, marker='|')
 ax.text(1, y2_chitest + 2 * dy, r'$\ast$$\ast$$\ast$(post hoc)',
         fontsize=12, ha='left', va='bottom', color=col_chitest)
 
+ax.plot([2, 3], y4 + 2 * dy, color=col_chitest, marker='|')
+ax.plot([2, 4], y4 + dy, color=col_chitest, marker='|')
+ax.plot([3, 4], y4, color=col_chitest, marker='|')
+
 ax.plot([0, 1], y3, color=col_chitest, marker='|')
 ax.text(0.5, y3_chitest, 'ns', ha='center', va='bottom', color=col_chitest)
+ax.text(2.5, y4_chitest + 2 * dy, 'ns',
+        ha='center', va='bottom', color=col_chitest)
 
 ax.text(0, 30, r'$\ast$$\ast$$\ast$: $p<0.001$',
         ha='left', va='bottom', color=col_chitest)
